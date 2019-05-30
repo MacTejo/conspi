@@ -1,0 +1,272 @@
+﻿jQuery(document).ready(function () {
+	try {suscribe();} catch(err) {console.log(err); }
+	/*try{
+		cookie();
+	}catch(err){}*/
+	try{
+		social_links();
+	}catch(err){}
+	try{
+		openExternal();
+	}catch(err){}
+	try{
+		problogg();
+	}catch(err){}
+});
+
+function twitter(){
+	jQuery.getJSON("https://api.twitter.com/1/statuses/user_timeline/josedalvik.json?count=1&include_rts=1&callback=?", function(data) {
+     jQuery("#twitter").html(data[0].text);
+	});
+}
+
+function problogg(){
+	var count=0;
+	jQuery('.foot-col').each(function(){
+		if(jQuery(this).html()==""){
+			count=count+1;
+		}
+	});
+	if(count==3){
+		jQuery('.main-foot').hide();
+		jQuery('.bottom-foot').addClass('bottom-foot-add');
+	}
+}
+
+function social_links(){
+	jQuery('.social_rel div ul li a').each(function(){
+		jQuery(this).attr('rel','external');
+	});
+}
+
+function openExternal(){
+    if(!document.getElementsByTagName) return;
+    var anchors = document.getElementsByTagName('a');
+    for(var i = 0; i < anchors.length; i++){
+        var thisAnchor = anchors[i];
+        if(thisAnchor.getAttribute('href') && thisAnchor.getAttribute('rel') == 'external'){
+			thisAnchor.target = '_blank';
+        }else if(thisAnchor.getAttribute('href') && thisAnchor.getAttribute('rel') == 'youtube'){
+			thisAnchor.target = 'youtube';
+			try{
+				var url = thisAnchor.getAttribute('href');
+				var pre = url.indexOf("start=");
+				var ini = pre+6;
+				if (ini!=-1){
+					url = url.substring(ini);
+					var horas=url.indexOf("h");
+					var minutos=url.indexOf("m");
+					var segundos=url.indexOf("s");
+					var total=0;
+					if(horas!=-1 || minutos!=-1 || segundos!=-1){
+						if(horas!=-1){
+							var h=parseInt(url.substring(0,horas));
+							total=h*60*60;
+						}
+						if(minutos!=-1){
+							var m=parseInt(url.substring(horas+1,minutos));
+							total=total+m*60;
+						}
+						if(segundos!=-1){
+							var s=parseInt(url.substring(minutos+1,segundos));
+							total=total+s;
+						}
+						if(thisAnchor.getAttribute('href').indexOf("?")!=-1 && thisAnchor.getAttribute('href').indexOf("&")==-1){
+							url=thisAnchor.getAttribute('href').substring(0,pre-1)+"?start="+total.toString();
+						}else{
+							url=thisAnchor.getAttribute('href').substring(0,pre-1)+"&start="+total.toString();
+						}
+						thisAnchor.href=url;
+					}
+				}
+			}catch(e){
+				//say hello
+			}
+        }
+    }
+}
+
+function cookie(){
+	
+	var html="";
+	var message_div="hd_message";
+	
+	html=html+'<div class="'+message_div+'" id="t0">';
+	html=html+'	<div class="close">&nbsp;</div>';
+	
+	html=html+'¿Quieres aprender cómo hacer una conversión de diseño PSD a HTML? Realizaré una transmisión en vivo (tardará de 4 a 6 horas aproximadamente) en donde convertiré un archivo PSD y al mismo tiempo estaré respondiendo dudas y comentarios. Utiliza el siguiente formulario para hacer sugerencias (fecha, hora y tu diseño PSD sugerido): <a href="https://goo.gl/forms/Y1QRpjmQ6fSBdwD12" target="_blank">Google form</a>.';
+	
+	html=html+'</div>';
+	
+	jQuery('body').prepend(html);
+	
+	var cookievar="psdhtml2";
+	if(getCookie(cookievar)!="1"){
+		var pos = jQuery(window).scrollTop(); 
+		jQuery('.'+message_div).fadeIn(600).animate({'top': 200+pos}, 1000);
+	}
+	jQuery(window).bind('scroll', function(){ 
+		var pos = jQuery(window).scrollTop(); 
+		jQuery('.'+message_div).stop().animate({'top': 200+pos}, 600);
+	});
+	jQuery('.'+message_div+' .close').click(function(){
+		/*var t0 = jQuery('.'+message_div).attr('id');
+		if(t0=="t0"){
+			jQuery('.'+message_div).fadeOut(600)
+			setTimeout(function() {
+				html='	<div class="close">&nbsp;</div>';
+				html=html+'<a href="https://www.freelancer.com/get/tooltor" target="_blank" style="color: #000000;">En  Freelancer.com puedes encontrar u ofrecer trabajo outsourcing de desarrollo de software, diseño web, bases de datos y más. Puedes registrarte siguiendo este enlace y obtendrás 20 USD en tu cuenta. <span style="text-decoration: underline;">clic aqui</span><br/><br/><img src="https://www.elconspirador.com/freelancer-sm.png" alt="" /></a>';
+				jQuery('.'+message_div).html(html);
+				jQuery('.'+message_div).fadeIn(600)
+				jQuery('.'+message_div).attr('id', 't1'); 
+				jQuery('.'+message_div+' .close').click(function(){
+					jQuery('.'+message_div).fadeOut(600);
+				});
+			}, 1000);
+		}else{*/
+			setCookie(cookievar, 1);
+			if(getCookie(cookievar)==1){
+				jQuery('.'+message_div).fadeOut(600);
+			}
+		//}
+	});
+}
+
+function setCookie(nombre, valor, tiempo){
+    var fecha = new Date();
+    fecha.setTime(fecha.getTime() + tiempo);
+    document.cookie = nombre + ' = ' + escape(valor) + ((tiempo == null) ? '' : '; expires = ' + fecha.toGMTString()) + '; path=/';
+}
+
+function getCookie(nombre){
+    var nombreCookie, valorCookie, cookie = null, cookies = document.cookie.split(';');
+    for (i=0; i<cookies.length; i++){
+      valorCookie = cookies[i].substr(cookies[i].indexOf('=') + 1);
+      nombreCookie = cookies[i].substr(0,cookies[i].indexOf('=')).replace(/^\s+|\s+$/g, '');
+      if (nombreCookie == nombre)
+        cookie = unescape(valorCookie);
+    }
+    return cookie;
+}
+
+function suscribe(){
+	console.log(jQuery('#sus_id a').html());
+	jQuery('#sus_id, #sus_id a').click(function(event){
+		console.log("hola");
+		/**/
+		jQuery('.suscripcion_back .form_back .form_content .warning').hide();
+		jQuery('.suscripcion_back .form_back .form_content .warning').html("Por favor ingrese un correo electr&oacute;nico valido.");
+		jQuery('#sus_email').css({'border':'1px solid #1387a3'});
+		//
+		jQuery('#sus_email').show();
+		jQuery('#sus_nombre').show();
+		//
+		jQuery('#sus_email').val("");
+		jQuery('#sus_nombre').val("");
+		//
+		jQuery('.suscripcion_back .form_back .form_content .content .desc').html('Para recibir boletines de informaci&oacute;n, por favor escribe tu correo electr&oacute;nico:');
+		jQuery('.suscripcion_back .form_back .form_content .successful').hide();
+		//
+		jQuery('#sus_ok').val("Aceptar");
+		jQuery('#sus_notok').val("Cancelar");
+		/**/
+		jQuery('.suscripcion_back').fadeIn(600);
+		event.preventDefault();
+		return false;
+	});
+	// *************
+	
+	jQuery('.suscripcion_back .form_back .close, .suscripcion_back .form_back .form_content #sus_notok').click(function(){
+		jQuery('.suscripcion_back').fadeOut(600);
+		//
+		jQuery('#sus_email').val("");
+		jQuery('#sus_nombre').val("");
+	});
+	jQuery('.suscripcion_back .form_back .form_content #sus_ok').click(function(){
+		if(jQuery(this).val()=="Registrar otro correo"){
+			jQuery('.suscripcion_back .form_back .form_content .warning').hide();
+			jQuery('.suscripcion_back .form_back .form_content .warning').html("Por favor ingrese un correo electr&oacute;nico valido.");
+			jQuery('#sus_email').css({'border':'1px solid #1387a3'});
+			//
+			jQuery('#sus_email').show();
+			jQuery('#sus_nombre').show();
+			//
+			jQuery('#sus_email').val("");
+			jQuery('#sus_nombre').val("");
+			//
+			jQuery('.suscripcion_back .form_back .form_content .title').html('Registro de correo electr&oacute;nico');
+			jQuery('.suscripcion_back .form_back .form_content .content .desc').html('Para recibir boletines de informaci&oacute;n, por favor escribe tu correo electr&oacute;nico:');
+			jQuery('.suscripcion_back .form_back .form_content .successful').hide();
+			//
+			jQuery('#sus_ok').val("Aceptar");
+			jQuery('#sus_notok').val("Cancelar");
+		}else{
+			var email=jQuery('#sus_email').val();
+			if(!validateEmail(email) || email==""){
+				jQuery('.suscripcion_back .form_back .form_content .warning').html("Por favor ingrese un correo electr&oacute;nico valido.");
+				jQuery('.suscripcion_back .form_back .form_content .warning').fadeIn(600);
+				jQuery('#sus_email').css({'border':'1px solid #771c23'});
+			}else{
+				jQuery('.suscripcion_back .form_back .form_content .warning').hide();
+				jQuery('.suscripcion_back .form_back .form_content .warning').html("Por favor ingrese un correo electr&oacute;nico valido.");
+				jQuery('#sus_email').css({'border':'1px solid #1387a3'});
+				//
+				var semail=jQuery('#sus_email').val();
+				var snombre=jQuery('#sus_nombre').val();
+				var ok=0;
+				/* *************************** */
+				var url_send = "/suscripcion/ajax/save";
+				var xdata = "nombre="+snombre+"&correo="+semail;
+				jQuery.ajax({
+					url: url_send, 
+					data: xdata,
+					type: "POST",
+					success: function(result){
+						if(result.indexOf("NOT")!=-1){
+							jQuery('.suscripcion_back .form_back .form_content .warning').html("Ha sucedido un error, por favor int&eacute;ntalo de nuevo.");
+							jQuery('.suscripcion_back .form_back .form_content .warning').fadeIn(600);
+							jQuery('#sus_email').css({'border':'1px solid #771c23'});
+						}else if(result.indexOf("REPEATED")!=-1){
+							//true
+							jQuery('.suscripcion_back .form_back .form_content .content .desc').html('Correo ya existe! puedes registrar otro correo o finalizar haciendo clic en el bot&oacute;n rojo. ');
+							jQuery('.suscripcion_back .form_back .form_content .successful').fadeIn(600);
+							//
+							jQuery('#sus_ok').val("Registrar otro correo");
+							jQuery('#sus_notok').val("Cerrar");
+							//
+							jQuery('#sus_email').hide();
+							jQuery('#sus_nombre').hide();
+						}else{
+							//true
+							jQuery('.suscripcion_back .form_back .form_content .content .desc').html('Completado! puedes registrar otro correo o finalizar haciendo clic en el bot&oacute;n rojo. ');
+							jQuery('.suscripcion_back .form_back .form_content .successful').fadeIn(600);
+							//
+							jQuery('#sus_ok').val("Registrar otro correo");
+							jQuery('#sus_notok').val("Cerrar");
+							//
+							jQuery('#sus_email').hide();
+							jQuery('#sus_nombre').hide();
+						}
+					}
+				});
+				/* *************************** */
+			}
+		}
+	});
+	  jQuery('a[href^="#"]').bind('click.smoothscroll',function (e) {
+		e.preventDefault();
+		var target = this.hash,
+			jQuerytarget = jQuery(target);
+
+		jQuery('html, body').stop().animate( {
+		  'scrollTop': jQuerytarget.offset().top-40
+		}, 900, 'swing', function () {
+		  window.location.hash = target;
+		} );
+	  } );
+}
+
+function validateEmail(email) {
+  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  return emailReg.test( email );
+}

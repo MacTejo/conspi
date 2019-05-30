@@ -1,0 +1,29 @@
+function counter(counter_url) {
+	var data ="e=c";
+	var ajax=objAjax();
+	ajax.open("POST", counter_url+"contador/", true);
+	ajax.onreadystatechange=function() {
+		if (ajax.readyState==4) {			
+			setTimeout(function(){counter(counter_url);}, 30000);
+		}
+	}
+	ajax.send(data);
+};
+
+function objAjax(){
+    var xmlhttp=false;
+    try {
+        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+        try {
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (E) {
+            xmlhttp = false;
+        }
+    }
+
+    if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+		xmlhttp = new XMLHttpRequest();
+    }
+    return xmlhttp;
+}

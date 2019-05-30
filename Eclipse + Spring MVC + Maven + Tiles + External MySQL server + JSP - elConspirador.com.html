@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/ -->
+<html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/shares.json"></script><script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/1.txt"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://www.elconspirador.com/xmlrpc.php">
+    <title>Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v5.9.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com">
+<meta property="og:description" content="Visitas: 32656Tiempo total: 1047 días con 11:22:30 hrsEn esta publicación explicaré como desarrollar una aplicación con el framework Spring MVC en el IDE Eclipse, utilizando Tiles (plantillas HTML). La aplicación usa MySQL, JSP y Maven… Hacer esta investigación me consumió varias horas, así que espero sea de ayuda. Eclipse Oxigen Puedes descargar el IDE en la siguiente dirección: https://www.eclipse.org/downloads/ El instalador descargado fue eclipse-inst-win64.exe. Java Eclipse necesita Java 8 para funcionar, para descargarlo será necesario iniciar sesión en Oracle: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html En mi caso descargué la versión x64 (dk-8u161-windows-x64.exe). Eclipse solicita la versión 7, pero desde ahí empezamos con el pie izquierdo porque aunque instales la versión 7 no funcionará, al final te terminará solicitando la versión 8. Instalación de Eclipse">
+<meta property="og:url" content="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/">
+<meta property="og:site_name" content="elConspirador.com">
+<meta property="article:tag" content=".jar">
+<meta property="article:tag" content="@ModelAttribute">
+<meta property="article:tag" content="@Valid">
+<meta property="article:tag" content="Add Library">
+<meta property="article:tag" content="aka Spring IDE and Spring Tool suite">
+<meta property="article:tag" content="Apache">
+<meta property="article:tag" content="appServlet">
+<meta property="article:tag" content="archivo JSP">
+<meta property="article:tag" content="base de datos">
+<meta property="article:tag" content="body">
+<meta property="article:tag" content="Bootstrap">
+<meta property="article:tag" content="clean">
+<meta property="article:tag" content="código">
+<meta property="article:tag" content="coeficiente intelectual">
+<meta property="article:tag" content="Controller">
+<meta property="article:tag" content="correo electrónico">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="DAO">
+<meta property="article:tag" content="datos">
+<meta property="article:tag" content="Datos incorrectos">
+<meta property="article:tag" content="DB">
+<meta property="article:tag" content="Download and install">
+<meta property="article:tag" content="Eclipse">
+<meta property="article:tag" content="Eclipse IDE">
+<meta property="article:tag" content="Eclipse IDE for Java EE Developers">
+<meta property="article:tag" content="Eclipse MarketPlace">
+<meta property="article:tag" content="Eclipse Oxigen">
+<meta property="article:tag" content="eclipse-inst-win64.exe">
+<meta property="article:tag" content="entity">
+<meta property="article:tag" content="expresiones regulares">
+<meta property="article:tag" content="External MySQL server">
+<meta property="article:tag" content="footer">
+<meta property="article:tag" content="form">
+<meta property="article:tag" content="formulario">
+<meta property="article:tag" content="framework Spring MVC">
+<meta property="article:tag" content="Generate">
+<meta property="article:tag" content="getters">
+<meta property="article:tag" content="header">
+<meta property="article:tag" content="HeidiSQL">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="iniciar sesión">
+<meta property="article:tag" content="inyección de código">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Java compiler">
+<meta property="article:tag" content="Javascript">
+<meta property="article:tag" content="Javax.validation">
+<meta property="article:tag" content="JdbcTemplate">
+<meta property="article:tag" content="JRE">
+<meta property="article:tag" content="JRE System Library">
+<meta property="article:tag" content="jre-8u161-windows-x64.exe">
+<meta property="article:tag" content="jre.1.8.0_161">
+<meta property="article:tag" content="JS">
+<meta property="article:tag" content="JSP">
+<meta property="article:tag" content="Layout.jsp">
+<meta property="article:tag" content="Login correcto">
+<meta property="article:tag" content="main">
+<meta property="article:tag" content="maquina virtual">
+<meta property="article:tag" content="Maven">
+<meta property="article:tag" content="META-INF">
+<meta property="article:tag" content="Mysql">
+<meta property="article:tag" content="MySQL server">
+<meta property="article:tag" content="Objeto de acceso a los datos">
+<meta property="article:tag" content="pageContext.request.contextPath">
+<meta property="article:tag" content="página">
+<meta property="article:tag" content="plantilla JdbcTemplate">
+<meta property="article:tag" content="plantillas HTML">
+<meta property="article:tag" content="pom.xml">
+<meta property="article:tag" content="processing XML">
+<meta property="article:tag" content="Project explorer">
+<meta property="article:tag" content="Project facets">
+<meta property="article:tag" content="repository">
+<meta property="article:tag" content="root-context">
+<meta property="article:tag" content="Sb-admin2">
+<meta property="article:tag" content="schema mappings">
+<meta property="article:tag" content="servidor Ubuntu">
+<meta property="article:tag" content="servlet-context">
+<meta property="article:tag" content="Servlet-context.xml">
+<meta property="article:tag" content="setters">
+<meta property="article:tag" content="Source">
+<meta property="article:tag" content="spring">
+<meta property="article:tag" content="Spring Legacy Project">
+<meta property="article:tag" content="Spring MVC">
+<meta property="article:tag" content="Spring MVC Project">
+<meta property="article:tag" content="Spring Source Tool Suite">
+<meta property="article:tag" content="Spring STS">
+<meta property="article:tag" content="Spring Tool">
+<meta property="article:tag" content="spring-web">
+<meta property="article:tag" content="Spring-webmvc">
+<meta property="article:tag" content="spring.schemas">
+<meta property="article:tag" content="src">
+<meta property="article:tag" content="STS">
+<meta property="article:tag" content="tag">
+<meta property="article:tag" content="tag c">
+<meta property="article:tag" content="tecnologías">
+<meta property="article:tag" content="test">
+<meta property="article:tag" content="Tiles">
+<meta property="article:tag" content="tiles.xml">
+<meta property="article:tag" content="token">
+<meta property="article:tag" content="Tomcat">
+<meta property="article:tag" content="Update Project">
+<meta property="article:tag" content="URL">
+<meta property="article:tag" content="validación">
+<meta property="article:tag" content="variables globales">
+<meta property="article:tag" content="Vista">
+<meta property="article:tag" content="WEB-INF">
+<meta property="article:tag" content="webapp">
+<meta property="article:tag" content="Workspace">
+<meta property="article:tag" content="XML">
+<meta property="article:section" content="Software">
+<meta property="article:published_time" content="2018-04-03T06:28:56+00:00">
+<meta property="article:modified_time" content="2018-04-03T07:06:13+00:00">
+<meta property="og:updated_time" content="2018-04-03T07:06:13+00:00">
+<meta property="og:image" content="https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web.jpg">
+<meta property="og:image:secure_url" content="https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web.jpg">
+<meta property="og:image:width" content="991">
+<meta property="og:image:height" content="476">
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.elconspirador.com\/","name":"elConspirador.com","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.elconspirador.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://s7.addthis.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="elConspirador.com » Feed" href="https://www.elconspirador.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="elConspirador.com » Comments Feed" href="https://www.elconspirador.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="elConspirador.com » Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP Comments Feed" href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.elconspirador.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.10"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/wp-emoji-release.min.js.descarga" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="yarppWidgetCss-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/widget.css" type="text/css" media="all">
+<link rel="stylesheet" id="comment-rating-field-plugin-rating-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/rating.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="fm-jquery-ui-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/jquery-ui-1.10.3.custom.css" type="text/css" media="all">
+<link rel="stylesheet" id="fm-jquery-ui-spinner-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/jquery-ui-spinner.css" type="text/css" media="all">
+<link rel="stylesheet" id="form_maker_calendar-jos-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/calendar-jos.css" type="text/css" media="all">
+<link rel="stylesheet" id="phone_field_css-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/intlTelInput.css" type="text/css" media="all">
+<link rel="stylesheet" id="form_maker_frontend-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/form_maker_frontend.css" type="text/css" media="all">
+<link rel="stylesheet" id="fm_googlefonts-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="fm-animate-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/fm-animate.css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="fvp-frontend-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/frontend.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-ulike-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/wp-ulike.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrap-theme-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/bootstrap-theme.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="fontawesome-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="swiperjs-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/swiper.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elconspiradorcss-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/elconspirador.css" type="text/css" media="all">
+<link rel="stylesheet" id="lightslidercss-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lightslider.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-lazyloadxt-spinner-css-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/jquery.lazyloadxt.spinner.css" type="text/css" media="all">
+<link rel="stylesheet" id="addthis_all_pages-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/addthis_wordpress_public.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="yarppRelatedCss-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/related.css" type="text/css" media="all">
+<link rel="stylesheet" id="mediaelementjs-styles-css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/mediaelementplayer.css" type="text/css" media="all">
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/jquery.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/jquery-migrate.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/admin-ajax.php"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/addthis_widget.js.descarga"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;"><iframe id="_atssh51" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px; left: 0px;" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/sh.e4e8af4de595fdb10ec1459d.html"></iframe></div><style type="text/css">.at-icon{fill:#fff;border:0}.at-icon-wrapper{display:inline-block;overflow:hidden}a .at-icon-wrapper{cursor:pointer}.at-rounded,.at-rounded-element .at-icon-wrapper{border-radius:12%}.at-circular,.at-circular-element .at-icon-wrapper{border-radius:50%}.addthis_32x32_style .at-icon{width:2pc;height:2pc}.addthis_24x24_style .at-icon{width:24px;height:24px}.addthis_20x20_style .at-icon{width:20px;height:20px}.addthis_16x16_style .at-icon{width:1pc;height:1pc}#at16lb{display:none;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1001;background-color:#000;opacity:.001}#at_complete,#at_error,#at_share,#at_success{position:static!important}.at15dn{display:none}#at15s,#at16p,#at16p form input,#at16p label,#at16p textarea,#at_share .at_item{font-family:arial,helvetica,tahoma,verdana,sans-serif!important;font-size:9pt!important;outline-style:none;outline-width:0;line-height:1em}* html #at15s.mmborder{position:absolute!important}#at15s.mmborder{position:fixed!important;width:250px!important}#at15s{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);float:none;line-height:1em;margin:0;overflow:visible;padding:5px;text-align:left;position:absolute}#at15s a,#at15s span{outline:0;direction:ltr;text-transform:none}#at15s .at-label{margin-left:5px}#at15s .at-icon-wrapper{width:1pc;height:1pc;vertical-align:middle}#at15s .at-icon{width:1pc;height:1pc}.at4-icon{display:inline-block;background-repeat:no-repeat;background-position:top left;margin:0;overflow:hidden;cursor:pointer}.addthis_16x16_style .at4-icon,.addthis_default_style .at4-icon,.at4-icon,.at-16x16{width:1pc;height:1pc;line-height:1pc;background-size:1pc!important}.addthis_32x32_style .at4-icon,.at-32x32{width:2pc;height:2pc;line-height:2pc;background-size:2pc!important}.addthis_24x24_style .at4-icon,.at-24x24{width:24px;height:24px;line-height:24px;background-size:24px!important}.addthis_20x20_style .at4-icon,.at-20x20{width:20px;height:20px;line-height:20px;background-size:20px!important}.at4-icon.circular,.circular .at4-icon,.circular.aticon{border-radius:50%}.at4-icon.rounded,.rounded .at4-icon{border-radius:4px}.at4-icon-left{float:left}#at15s .at4-icon{text-indent:20px;padding:0;overflow:visible;white-space:nowrap;background-size:1pc;width:1pc;height:1pc;background-position:top left;display:inline-block;line-height:1pc}.addthis_vertical_style .at4-icon,.at4-follow-container .at4-icon{margin-right:5px}html>body #at15s{width:250px!important}#at15s.atm{background:none!important;padding:0!important;width:10pc!important}#at15s_inner{background:#fff;border:1px solid #fff;margin:0}#at15s_head{position:relative;background:#f2f2f2;padding:4px;cursor:default;border-bottom:1px solid #e5e5e5}.at15s_head_success{background:#cafd99!important;border-bottom:1px solid #a9d582!important}.at15s_head_success a,.at15s_head_success span{color:#000!important;text-decoration:none}#at15s_brand,#at15sptx,#at16_brand{position:absolute}#at15s_brand{top:4px;right:4px}.at15s_brandx{right:20px!important}a#at15sptx{top:4px;right:4px;text-decoration:none;color:#4c4c4c;font-weight:700}#at15sptx:hover{text-decoration:underline}#at16_brand{top:5px;right:30px;cursor:default}#at_hover{padding:4px}#at_hover .at_item,#at_share .at_item{background:#fff!important;float:left!important;color:#4c4c4c!important}#at_share .at_item .at-icon-wrapper{margin-right:5px}#at_hover .at_bold{font-weight:700;color:#000!important}#at_hover .at_item{width:7pc!important;padding:2px 3px!important;margin:1px;text-decoration:none!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover{margin:0!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover,#at_share .at_item.athov,#at_share .at_item:hover{background:#f2f2f2!important;border:1px solid #e5e5e5;color:#000!important;text-decoration:none}.ipad #at_hover .at_item:focus{background:#fff!important;border:1px solid #fff}.at15t{display:block!important;height:1pc!important;line-height:1pc!important;padding-left:20px!important;background-position:0 0;text-align:left}.addthis_button,.at15t{cursor:pointer}.addthis_toolbox a.at300b,.addthis_toolbox a.at300m{width:auto}.addthis_toolbox a{margin-bottom:5px;line-height:initial}.addthis_toolbox.addthis_vertical_style{width:200px}.addthis_button_facebook_like .fb_iframe_widget{line-height:100%}.addthis_button_facebook_like iframe.fb_iframe_widget_lift{max-width:none}.addthis_toolbox a.addthis_button_counter,.addthis_toolbox a.addthis_button_facebook_like,.addthis_toolbox a.addthis_button_facebook_send,.addthis_toolbox a.addthis_button_facebook_share,.addthis_toolbox a.addthis_button_foursquare,.addthis_toolbox a.addthis_button_linkedin_counter,.addthis_toolbox a.addthis_button_pinterest_pinit,.addthis_toolbox a.addthis_button_tweet{display:inline-block}.addthis_toolbox span.addthis_follow_label{display:none}.addthis_toolbox.addthis_vertical_style span.addthis_follow_label{display:block;white-space:nowrap}.addthis_toolbox.addthis_vertical_style a{display:block}.addthis_toolbox.addthis_vertical_style.addthis_32x32_style a{line-height:2pc;height:2pc}.addthis_toolbox.addthis_vertical_style .at300bs{margin-right:4px;float:left}.addthis_toolbox.addthis_20x20_style span{line-height:20px}.addthis_toolbox.addthis_32x32_style span{line-height:2pc}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact,.addthis_toolbox.addthis_pill_combo_style a{float:left}.addthis_toolbox.addthis_pill_combo_style a.addthis_button_tweet{margin-top:-2px}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact{margin-right:4px}.addthis_default_style .addthis_separator{margin:0 5px;display:inline}div.atclear{clear:both}.addthis_default_style .addthis_separator,.addthis_default_style .at4-icon,.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300bs,.addthis_default_style .at300m{float:left}.at300b img,.at300bo img{border:0}a.at300b .at4-icon,a.at300m .at4-icon{display:block}.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300m{padding:0 2px}.at300b,.at300bo,.at300bs,.at300m{cursor:pointer}.addthis_button_facebook_like.at300b:hover,.addthis_button_facebook_like.at300bs:hover,.addthis_button_facebook_send.at300b:hover,.addthis_button_facebook_send.at300bs:hover{opacity:1}.addthis_20x20_style .at15t,.addthis_20x20_style .at300bs{overflow:hidden;display:block;height:20px!important;width:20px!important;line-height:20px!important}.addthis_32x32_style .at15t,.addthis_32x32_style .at300bs{overflow:hidden;display:block;height:2pc!important;width:2pc!important;line-height:2pc!important}.at300bs{overflow:hidden;display:block;background-position:0 0;height:1pc;width:1pc;line-height:1pc!important}.addthis_default_style .at15t_compact,.addthis_default_style .at15t_expanded{margin-right:4px}#at_share .at_item{width:123px!important;padding:4px;margin-right:2px;border:1px solid #fff}#at16p{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);z-index:10000001;position:absolute;top:50%;left:50%;width:300px;padding:10px;margin:0 auto;margin-top:-185px;margin-left:-155px;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#5e5e5e}#at_share{margin:0;padding:0}#at16pt{position:relative;background:#f2f2f2;height:13px;padding:5px 10px}#at16pt a,#at16pt h4{font-weight:700}#at16pt h4{display:inline;margin:0;padding:0;font-size:9pt;color:#4c4c4c;cursor:default}#at16pt a{position:absolute;top:5px;right:10px;color:#4c4c4c;text-decoration:none;padding:2px}#at15sptx:focus,#at16pt a:focus{outline:thin dotted}#at15s #at16pf a{top:1px}#_atssh{width:1px!important;height:1px!important;border:0!important}.atm{width:10pc!important;padding:0;margin:0;line-height:9pt;letter-spacing:normal;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#444;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);padding:4px}.atm-f{text-align:right;border-top:1px solid #ddd;padding:5px 8px}.atm-i{background:#fff;border:1px solid #d5d6d6;padding:0;margin:0;box-shadow:1px 1px 5px rgba(0,0,0,.15)}.atm-s{margin:0!important;padding:0!important}.atm-s a:focus{border:transparent;outline:0;transition:none}#at_hover.atm-s a,.atm-s a{display:block;text-decoration:none;padding:4px 10px;color:#235dab!important;font-weight:400;font-style:normal;transition:none}#at_hover.atm-s .at_bold{color:#235dab!important}#at_hover.atm-s a:hover,.atm-s a:hover{background:#2095f0;text-decoration:none;color:#fff!important}#at_hover.atm-s .at_bold{font-weight:700}#at_hover.atm-s a:hover .at_bold{color:#fff!important}.atm-s a .at-label{vertical-align:middle;margin-left:5px;direction:ltr}.at_PinItButton{display:block;width:40px;height:20px;padding:0;margin:0;background-image:url(//s7.addthis.com/static/t00/pinit00.png);background-repeat:no-repeat}.at_PinItButton:hover{background-position:0 -20px}.addthis_toolbox .addthis_button_pinterest_pinit{position:relative}.at-share-tbx-element .fb_iframe_widget span{vertical-align:baseline!important}#at16pf{height:auto;text-align:right;padding:4px 8px}.at-privacy-info{position:absolute;left:7px;bottom:7px;cursor:pointer;text-decoration:none;font-family:helvetica,arial,sans-serif;font-size:10px;line-height:9pt;letter-spacing:.2px;color:#666}.at-privacy-info:hover{color:#000}.body .wsb-social-share .wsb-social-share-button-vert{padding-top:0;padding-bottom:0}.body .wsb-social-share.addthis_counter_style .addthis_button_tweet.wsb-social-share-button{padding-top:40px}.body .wsb-social-share.addthis_counter_style .addthis_button_facebook_like.wsb-social-share-button{padding-top:21px}@media print{#at4-follow,#at4-share,#at4-thankyou,#at4-whatsnext,#at4m-mobile,#at15s,.at4,.at4-recommended{display:none!important}}@media screen and (max-width:400px){.at4win{width:100%}}@media screen and (max-height:700px) and (max-width:400px){.at4-thankyou-inner .at4-recommended-container{height:122px;overflow:hidden}.at4-thankyou-inner .at4-recommended .at4-recommended-item:first-child{border-bottom:1px solid #c5c5c5}}</style><style type="text/css">.at-branding-logo{font-family:helvetica,arial,sans-serif;text-decoration:none;font-size:10px;display:inline-block;margin:2px 0;letter-spacing:.2px}.at-branding-logo .at-branding-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////+GlNUkcc1QAAAB1JREFUeNpiYIQDBjQmAwMmkwEM0JnY1WIxFyDAABGeAFEudiZsAAAAAElFTkSuQmCC")}.at-branding-logo .at-branding-icon,.at-branding-logo .at-privacy-icon{display:inline-block;height:10px;width:10px;margin-left:4px;margin-right:3px;margin-bottom:-1px;background-repeat:no-repeat}.at-branding-logo .at-privacy-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAMAAABR24SMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF8fr9ot/xXcfn2/P5AKva////////AKTWodjhjAAAAAd0Uk5T////////ABpLA0YAAAA6SURBVHjaJMzBDQAwCAJAQaj7b9xifV0kUKJ9ciWxlzWEWI5gMF65KUTv0VKkjVeTerqE/x7+9BVgAEXbAWI8QDcfAAAAAElFTkSuQmCC")}.at-branding-logo span{text-decoration:none}.at-branding-logo .at-branding-addthis,.at-branding-logo .at-branding-powered-by{color:#666}.at-branding-logo .at-branding-addthis:hover{color:#333}.at-cv-with-image .at-branding-addthis,.at-cv-with-image .at-branding-addthis:hover{color:#fff}a.at-branding-logo:visited{color:initial}.at-branding-info{display:inline-block;padding:0 5px;color:#666;border:1px solid #666;border-radius:50%;font-size:10px;line-height:9pt;opacity:.7;transition:all .3s ease;text-decoration:none}.at-branding-info span{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.at-branding-info:before{content:'i';font-family:Times New Roman}.at-branding-info:hover{color:#0780df;border-color:#0780df}</style><style id="service-icons-0"></style>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/if_gmap_front_end.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/intlTelInput.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/calendar.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/calendar_function.js.descarga"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var fm_objectL10n = {"plugin_url":"https:\/\/www.elconspirador.com\/wp-content\/plugins\/contact-form-maker","fm_file_type_error":"Can not upload this type of file","fm_field_is_required":"Field is required.","fm_min_max_check_1":"The ","fm_min_max_check_2":" value must be between ","fm_spinner_check":"Value must be between "};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/main_div_front_end.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/jquery.fitvids.min.js.descarga"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var fvpdata = {"ajaxurl":"https:\/\/www.elconspirador.com\/wp-admin\/admin-ajax.php","nonce":"bd4ebec541","fitvids":"1","dynamic":"","overlay":"","opacity":"0.75","color":"b","width":"640"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/frontend.min.js.descarga"></script>
+<script type="text/javascript">
+var mejsL10n = {"language":"en","strings":{"mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Turn off Fullscreen","mejs.fullscreen-on":"Go Fullscreen","mejs.download-video":"Download Video","mejs.fullscreen":"Fullscreen","mejs.time-jump-forward":["Jump forward 1 second","Jump forward %1 seconds"],"mejs.loop":"Toggle Loop","mejs.play":"Play","mejs.pause":"Pause","mejs.close":"Close","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.time-skip-back":["Skip back 1 second","Skip back %1 seconds"],"mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.mute-toggle":"Mute Toggle","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.ad-skip":"Skip ad","mejs.ad-skip-info":["Skip in 1 second","Skip in %1 seconds"],"mejs.source-chooser":"Source Chooser","mejs.stop":"Stop","mejs.speed-rate":"Speed Rate","mejs.live-broadcast":"Live Broadcast","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/mediaelement-and-player.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/mediaelement-migrate.min.js.descarga"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/mediaelement-and-player.min.js(1).descarga"></script>
+<link rel="https://api.w.org/" href="https://www.elconspirador.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.elconspirador.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.elconspirador.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.9.10">
+<link rel="shortlink" href="https://www.elconspirador.com/?p=5549">
+<link rel="alternate" type="application/json+oembed" href="https://www.elconspirador.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.elconspirador.com%2F2018%2F04%2F03%2Feclipse-spring-mvc-maven-tiles-external-mysql-server-jsp%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.elconspirador.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.elconspirador.com%2F2018%2F04%2F03%2Feclipse-spring-mvc-maven-tiles-external-mysql-server-jsp%2F&amp;format=xml">
+
+<!-- Protected by WP-SpamFree :: JS BEGIN -->
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/wpsfv2-js.php"></script> 
+<!-- Protected by WP-SpamFree :: JS END -->
+
+<script>
+                var theme_options = { ajax_url: "https://www.elconspirador.com/wp-admin/admin-ajax.php" };
+          </script><style type="text/css" id="syntaxhighlighteranchor"></style>
+<link rel="icon" href="https://www.elconspirador.com/wp-content/uploads/2014/08/cropped-elConspirador_explorer-1-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.elconspirador.com/wp-content/uploads/2014/08/cropped-elConspirador_explorer-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://www.elconspirador.com/wp-content/uploads/2014/08/cropped-elConspirador_explorer-1-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.elconspirador.com/wp-content/uploads/2014/08/cropped-elConspirador_explorer-1-270x270.png">
+<style type="text/css" id="theme-customize-css">
+            
+            
+            
+            
+        </style>		<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/js.js.descarga"></script>		
+		<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/counter.js.descarga"></script> 
+	<script type="text/javascript">	counter("//www.elconspirador.com/");</script>	
+	<link rel="stylesheet" type="text/css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/css-3.css">		
+	<link rel="stylesheet" type="text/css" href="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/jquery.panorama.css">		
+	<!-- Icono de elconspirador.com --> 		
+	<link rel="shortcut icon" href="https://www.elconspirador.com/favicon.ico">
+	<meta name="google-site-verification" content="9tI2df0xmCjplELGMidD5ubQA2yT6fJ8TixZVl6vMYI">
+<script type="text/javascript" charset="utf-8" async="" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/counter.b19bbdcc2d46baec1523.js.descarga"></script><style type="text/css">.addthis_counter{font-weight:700;display:inline-block;border:0;outline:0;cursor:pointer;color:#fff}.addthis_counter a{display:block;font-family:arial,helvetica,sans-serif!important;text-decoration:none!important;border:0}.addthis_counter{text-decoration:none!important;text-align:left}.addthis_counter .addthis_button_expanded{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAACaCAMAAADcrusAAAAA21BMVEX////+bUznWjrnWjrBwcGJiYnm5ubFxcWMjIyRkZH39/f19fX////nWjr+bUzys6n+uq7/7+z87evqd2H+hm3/5+P+sKPxqJz65OH/9/b+el3paU//zcT2yMDshXH99vX+kXz+nIn/w7n0vrX30cz9bEv/3tn529f/1s/ukYH3aUn+ppbvnY/bUjTmWTn/3dX+9fP3aEj/9vT52NH/5d/aUTP9a0r74tzlWDjfWz386+f/7en4b1H/7uv4b1D/3db/9/X/7uraUjT+9vT87Oj87OnpZEb52dH+dlezszuQAAAABHRSTlMAExMAzBw6IQAAAnlJREFUeF6009eKKzEMBuBJriW5T2/pPdvbqb28/xMdGbOQiyxZZ9n/QnjAH8KWJxl8uqeI3H8ZJFcUmatkFktmCUXnXHIBIRevJ/AcBuUSQI0onZ8k1/QxkNqVJIvyNPl8S1/ZMFkuuYxtqhQoS2MA1RNIGKUArjwk/4Lk0jtXp0QpjEjJHiw5SbzZQlo6eUi+fafba0985LKwqSOqJdNaMdmQ5O+NOn6WYsNlPk7nnvRF6iF3lOBz/MZqZ6kvZCBS+bUn1h/MvTCXmumYArEKijlYJr6N6t8y/fcn5zz+dfwvNlhH9ZmtB8nw6REj8vg0TO4wMnfJPpbsE4zOueQGQm5eT+A5DKopgF5htjhJLvFDIE1eoeiq0+T3A/5lw2Q65TIxmdagDU4AdIsgYJUB5NUh+RMklzbPmwwxgxVq0YLBXCBvNpBVuTgkP3/hw6UnPmLamSxHbATTRjPZouDvrT5+lm7LZTHJFp60XeYhdxTgc/zGmtxg24lAhPZrT4w/WP7CXBqmEwzEaOgWYJj4Nrp9y/Tfn5zz+Hex5Ecy3EX12e+G/9mrQxUAYBgGooEFAm3//3snZmviJnL+6cMRrXSgHqsWOGb8iISEhISEqDxRAsSld5De/nLbr4MViEEYDMI5mFQ3ff/nXejx33YHcyqtc/8QQSXaRYfJZpAaFWx2FdwfMXyqYdYjp4punpP5fcgiiyyyyCKVl9+6nxQHCP+t20WHCTdIjQo2KjgDAT/Y7UQk/li1tkPtyaQlEhBARABBUV+lvhc1rz4w+FX4bKWLrA0cp7Ue+KhqnpA/mXggAQFEBBAU9VXqe1HzzgNTv2Iyx9Dc8gWOjkKMG1wfQQAAAABJRU5ErkJggg==");background-repeat:no-repeat;display:inline-block}.addthis_counter .atc_s{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAFVBMVEUAAAD///////////////////////9Iz20EAAAABnRSTlMAwPm7kB4+mBDvAAAAP0lEQVQI12MIVksDgyRTBrM0KEhmAApChRnS4ACdKcCIl5ko6MAiKAZmJjAAARsKE6GAsGE43IBwJLLTER4CAHvvQkc3Hji8AAAAAElFTkSuQmCC");background-size:10px;background-repeat:no-repeat;background-color:#fe6d4c;background-position:5px 5px;display:inline-block;border-radius:2px;min-width:25px;text-decoration:none}.addthis_counter .atc_s:hover{background-color:#e75a3a}.addthis_counter.addthis_bubble_style{background-image:url("data:image/gif;base64,R0lGODlhUgBkAKIEAOrq6sLCwoWFhf///////wAAAAAAAAAAACH5BAEAAAQALAAAAABSAGQAAAP/SLoa/jDKSetkOGsdwPhgKI5kaYpAsK1sd75wPKZsjQVyrpuq7eO7YLDnqwGFyBixuDomn6UlkwOtkqTTm3ULwmYXTi7U+3WJreSp+VxNF9fs8ZcBjz/dRo8dPSfU90l4TXqAcn1/hTuCLYSJQ31gjY45i3mTipB0kpcnlTZhnDyZdKFKo2ClMJ5GqS+rLa2dpw2xorOgtR+vg7kou7y9AzSzYBbGx8gRxAwCzc7P0NHS09TSywoCm60AAsvZwSDcxALgId2z5OUf56fp6uyj7uXwmfLg9JD2wfh9+r38X76pGwBwisCBBYscRFhP2718Dh/OWThwXb+IEidi/New+SKIhD4ozmu3sRVIhSVLnVRYcWXIluNgopPZjmY8m/VwQlQnblxKRz29VRtKtCg0YsmSOsBgtGmzNz9zDCMgEkpQWGyI+KuyElebBVuhdI2jNc5JRF+pRtUBEu3XqlYSum0DNy6jPQHqcrVEVq2ds2spYQssY2xWsGZ/9MWW+NNiqo35cpmqV8jVFkqTMXVqlEnmz1I4i4Y3twplwjqCehVTthC71VxaA3qdSPYe2oVs/0WVG7HrBqgx+f1deouKylsEFDeOPPlyNM3tPpcTXSzw2oMT4QakOzJs475n8+Ye/vZ4vOV30+rN+Pf1PacBXQWdefPopgQSAAA7");background-repeat:no-repeat}.addthis_counter a.atc_s{font-size:11px;font-weight:100;color:#fff;padding:0 5px 0 20px;line-height:20px;overflow:hidden;cursor:pointer;transition:none}.addthis_counter .atc_s-span,.addthis_counter a.atc_s{display:block;height:20px}.addthis_counter .addthis_button_expanded.at300m .at4-icon{display:none!important}.addthis_counter a.addthis_button_expanded:hover,.addthis_counter.addthis_pill_style a.addthis_button_expanded:hover{text-decoration:none;color:#000}.addthis_counter .addthis_button_expanded{display:block;background-repeat:no-repeat;background-position:0 -40px;width:50px;height:33px;line-height:33px;padding-bottom:4px;margin-bottom:3px;text-align:center;text-decoration:none;font-size:1pc;font-weight:700;color:#333}.addthis_counter{vertical-align:top}.addthis_counter.addthis_native_counter .addthis_button_expanded{font-weight:400}* html .addthis_counter.compatmode0 .addthis_button_expanded{padding-bottom:0!important}* html .addthis_counter .addthis_button_expanded{height:37px}.addthis_counter .addthis_button_expanded:hover{background-position:0 -77px;cursor:pointer;color:#000}.addthis_counter .addthis_button_expanded .at300bs{display:none!important}.addthis_counter.addthis_pill_style{display:block;height:25px;overflow:hidden}.addthis_counter.addthis_pill_style a.atc_s{float:left}.addthis_counter.addthis_pill_style a.addthis_button_expanded{display:none;background-repeat:no-repeat;background-position:0 -114px;width:34px!important;height:20px;line-height:20px;margin:0 0 0 3px;padding:0 0 0 4px;float:left;text-align:center;text-decoration:none;font-family:arial,helvetica,sans-serif;font-weight:700;font-size:11px;color:#333;-ms-box-sizing:content-box;-o-box-sizing:content-box;box-sizing:content-box}.addthis_counter.addthis_pill_style.addthis_nonzero a.addthis_button_expanded{display:block!important;transition:none}.addthis_counter.addthis_pill_style a.addthis_button_expanded:hover{background-position:0 -134px!important}.addthis_counter.addthis_bubble_style{margin:0 0 0 -2px;text-align:center;font-weight:700;font-family:arial,helvetica,sans-serif;color:#000;background-repeat:no-repeat;background-position:0 -4pc;padding:0 0 0 4px;height:1pc;width:2pc!important;-ms-box-sizing:content-box;-o-box-sizing:content-box;box-sizing:content-box}.addthis_native_counter_parent .addthis_counter.addthis_bubble_style{background-position:0 -4pc!important}.addthis_counter.addthis_bubble_style.addthis_native_counter{margin:0 2px}.addthis_counter.addthis_bubble_style a.addthis_button_expanded{font-size:11px;height:1pc;line-height:1pc;width:34px;background:none}.addthis_counter.addthis_bubble_style:hover{background-position:-36px -4pc!important}.addthis_20x20_style .addthis_counter.addthis_bubble_style{background-repeat:no-repeat;background-position:0 -5pc!important;height:20px;width:35px!important;line-height:20px;padding:0 0 0 6px}.addthis_20x20_style .addthis_counter.addthis_bubble_style:hover{background-position:-41px -5pc!important}.addthis_20x20_style .addthis_counter.addthis_bubble_style a.addthis_button_expanded{background:none;font-size:9pt;line-height:20px;height:20px;margin:0;width:35px!important;padding:0!important}.addthis_20x20_style .addthis_counter.addthis_bubble_style.addthis_native_counter a.addthis_button_expanded{font-size:11px}.addthis_32x32_style .addthis_counter.addthis_bubble_style,.addthis_32x32_white_style .addthis_counter.addthis_bubble_style{background-repeat:no-repeat;background-position:0 0!important;height:2pc;width:56px!important;line-height:2pc;padding:0 0 0 6px}.addthis_32x32_style .addthis_counter.addthis_bubble_style a.addthis_button_expanded,.addthis_32x32_white_style .addthis_counter.addthis_bubble_style a.addthis_button_expanded{background:none;font-size:1pc;line-height:2pc;height:2pc;margin:0;width:56px!important;padding:0!important}.addthis_32x32_style .addthis_counter.addthis_bubble_style:hover,.addthis_32x32_white_style .addthis_counter.addthis_bubble_style:hover{background-position:0 -2pc!important}.addthis_counter.addthis_bubble_style .atc_s{display:none!important}* html .addthis_counter.addthis_bubble_style{width:36px!important;display:inline}* html .addthis_counter.bubblecompatmode0{width:2pc!important;display:block}* html .addthis_counter.addthis_bubble_style a.addthis_button_expanded{width:24px!important;height:14px!important;line-height:14px!important;padding:0;margin-top:1px!important;display:inline}* html .addthis_counter.bubblecompatmode0 a.addthis_button_expanded{width:36px}* html .addthis_32x32_style .addthis_counter.addthis_bubble_style{width:60px!important}* html .addthis_32x32_style .addthis_counter.addthis_bubble_style a.addthis_button_expanded{width:46px;height:26px!important;line-height:26px!important;margin-top:2px!important}* html .addthis_32x32_style .addthis_counter.bubblecompatmode0 a.addthis_button_expanded{height:2pc!important;line-height:2pc!important}</style></head>
+
+<body class="post-template-default single single-post postid-5549 single-format-standard">
+    <header id="header">
+        <div class="logo" image-data="background-image:url();">
+            <h1><a href="https://www.elconspirador.com/" class="custom-logo-link" rel="home" itemprop="url"><img src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/elconspirador-white-3.png" alt="elConspirador.com" class="custom-logo"></a></h1>        </div>
+        <div class="menu-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <nav class="main-nav">
+                            <ul id="primary-nav" class=""><li id="menu-item-2980" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2980"><a href="https://www.elconspirador.com/exploracion/">Exploración</a></li>
+<li id="menu-item-2363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2363"><a href="https://www.elconspirador.com/acerca/">Acerca</a></li>
+<li id="menu-item-2360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2360"><a href="https://www.elconspirador.com/politica-de-privacidad/">Política de privacidad</a></li>
+<li id="menu-item-2361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2361"><a href="https://www.elconspirador.com/contacto/">Contacto</a></li>
+</ul>                            <a href="javascript:;" id="close-menu"> <i class="fa fa-close"></i></a>
+                        </nav>
+                    </div>
+                    <div class=" col-md-5 h-search">
+                        <!-- <form action="https://www.elconspirador.com/" class="search_form" method="get">
+                            <input type="text" placeholder="Search and hit enter..." required="" name="s">
+                            <button class="button-search" type="submit"><i class="fa fa-search"></i></button>
+                        </form> -->
+                        <div class="head-social">
+                            							<a class="socials" href="https://www.facebook.com/elConspiradorCom" target="_blank"><i class="fa fa-facebook"></i></a>
+							<a class="socials" href="https://twitter.com/jpgl2019" target="_blank"><i class="fa fa-twitter"></i></a>
+							<a class="socials" href="http://instagram.com/josepablo_gl" target="_blank"><i class="fa fa-instagram"></i></a> 
+							<a class="socials" href="https://www.youtube.com/channel/UCdimYMoWy6ME2xhKD1FeziA?sub_confirmation=1" target="_blank"><i class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<section class="section-content">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-8">
+
+                <article class="content-item post-5549 post type-post status-publish format-standard has-post-thumbnail hentry category-software tag-jar tag-modelattribute tag-valid tag-add-library tag-aka-spring-ide-and-spring-tool-suite tag-apache tag-appservlet tag-archivo-jsp tag-base-de-datos tag-body tag-bootstrap tag-clean tag-codigo tag-coeficiente-intelectual tag-controller tag-correo-electronico tag-css tag-dao tag-datos tag-datos-incorrectos tag-db tag-download-and-install tag-eclipse tag-eclipse-ide tag-eclipse-ide-for-java-ee-developers tag-eclipse-marketplace tag-eclipse-oxigen tag-eclipse-inst-win64-exe tag-entity tag-expresiones-regulares tag-external-mysql-server tag-footer tag-form tag-formulario tag-framework-spring-mvc tag-generate tag-getters tag-header tag-heidisql tag-html tag-iniciar-sesion tag-inyeccion-de-codigo tag-java tag-java-compiler tag-javascript tag-javax-validation tag-jdbctemplate tag-jre tag-jre-system-library tag-jre-8u161-windows-x64-exe tag-jre-1-8-0_161 tag-js tag-jsp tag-layout-jsp tag-login-correcto tag-main tag-maquina-virtual tag-maven tag-meta-inf tag-mysql tag-mysql-server tag-objeto-de-acceso-a-los-datos tag-pagecontext-request-contextpath tag-pagina tag-plantilla-jdbctemplate tag-plantillas-html tag-pom-xml tag-processing-xml tag-project-explorer tag-project-facets tag-repository tag-root-context tag-sb-admin2 tag-schema-mappings tag-servidor-ubuntu tag-servlet-context tag-servlet-context-xml tag-setters tag-source tag-spring tag-spring-legacy-project tag-spring-mvc tag-spring-mvc-project tag-spring-source-tool-suite tag-spring-sts tag-spring-tool tag-spring-web tag-spring-webmvc tag-spring-schemas tag-src tag-sts tag-tag tag-tag-c tag-tecnologias tag-test tag-tiles tag-tiles-xml tag-token tag-tomcat tag-update-project tag-url tag-validacion tag-variables-globales tag-vista tag-web-inf tag-webapp tag-workspace tag-xml">
+    <div class="entry-content">
+        <div class="post-title">
+                            <h1>Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP</h1>
+                        <div class="entry-date">
+                <ul>
+                    <li>
+                        <a href="https://www.elconspirador.com/software/" title="View all posts in Software">Software</a>                     </li>
+                    <li> Apr 03, 2018 </li>
+                    <!-- <li>0</li> -->
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="bubble-line"><div class="left-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0,29.4c0,0,7.5,0,7.5-7c0,0,7,0,7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7-7-7-7-7c0-7-7.5-7-7.5-7"></path>
+                        </svg>
+                </div><div class="right-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M15,29.4c0,0-7.5,0-7.5-7c0,0-7,0-7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7,7-7,7-7c0-7,7.5-7,7.5-7"></path>
+                        </svg>
+                </div></div>
+                        <div class="post-content">
+            <div class="at-above-post addthis_tool" data-url="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/"></div><!-- stdClass Object
+(
+    [id] => 19
+    [request_uri] => /2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/
+    [tiempo] => 90501750
+    [visitas] => 32656
+)
+ - 1 --><i style="font-size: 10px;">Visitas: 32656</i><br><i style="font-size: 10px;">Tiempo total: 1047 días con 11:22:30 hrs</i><br><p style="text-align: justify;">En esta publicación explicaré como desarrollar una aplicación con el framework Spring MVC en el IDE Eclipse, utilizando Tiles (plantillas HTML). La aplicación usa MySQL, JSP y Maven… Hacer esta investigación me consumió varias horas, así que espero sea de ayuda<span id="more-5549"></span>.</p>
+<p><strong>Eclipse Oxigen</strong></p>
+<p style="text-align: justify;">Puedes descargar el IDE en la siguiente dirección:</p>
+<p><a href="https://www.eclipse.org/downloads/" target="_blank" rel="noopener">https://www.eclipse.org/downloads/</a></p>
+<p style="text-align: justify;">El instalador descargado fue eclipse-inst-win64.exe.</p>
+<p><img class="alignnone size-full wp-image-5548 lazy-loaded" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/1-eclipse.jpg" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/1-eclipse.jpg" alt="" width="640" height="605" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/1-eclipse.jpg 640w, https://www.elconspirador.com/wp-content/uploads/2018/04/1-eclipse-300x284.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/1-eclipse-620x586.jpg 620w" data-srcset="" sizes="(max-width: 640px) 100vw, 640px"><noscript><img class="alignnone size-full wp-image-5548" src="https://www.elconspirador.com/wp-content/uploads/2018/04/1-eclipse.jpg" alt="" width="640" height="605" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/1-eclipse.jpg 640w, https://www.elconspirador.com/wp-content/uploads/2018/04/1-eclipse-300x284.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/1-eclipse-620x586.jpg 620w" sizes="(max-width: 640px) 100vw, 640px" /></noscript></p>
+<p><strong>Java</strong></p>
+<p style="text-align: justify;">Eclipse necesita Java 8 para funcionar, para descargarlo será necesario iniciar sesión en Oracle:</p>
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+<p style="text-align: justify;">En mi caso descargué la versión x64 (dk-8u161-windows-x64.exe). Eclipse solicita la versión 7, pero desde ahí empezamos con el pie izquierdo porque aunque instales la versión 7 no funcionará, al final te terminará solicitando la versión 8.</p>
+<p><img class="alignnone size-full wp-image-5550 lazy-loaded" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/2-java.jpg" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/2-java.jpg" alt="" width="864" height="635" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/2-java.jpg 864w, https://www.elconspirador.com/wp-content/uploads/2018/04/2-java-300x220.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/2-java-620x456.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/2-java-768x564.jpg 768w" data-srcset="" sizes="(max-width: 864px) 100vw, 864px"><noscript><img class="alignnone size-full wp-image-5550" src="https://www.elconspirador.com/wp-content/uploads/2018/04/2-java.jpg" alt="" width="864" height="635" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/2-java.jpg 864w, https://www.elconspirador.com/wp-content/uploads/2018/04/2-java-300x220.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/2-java-620x456.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/2-java-768x564.jpg 768w" sizes="(max-width: 864px) 100vw, 864px" /></noscript></p>
+<p><strong>Instalación de Eclipse</strong></p>
+<p style="text-align: justify;">Seleccionamos “Eclipse IDE for Java EE Developers”, esta instalación nos permitirá trabajar con aplicaciones JSP que se ejecutarán en un servidor web (Tomcat en nuestro caso), esta versión instalará todo lo que necesitamos en nuestro entorno de desarrollo (casi todo).</p>
+<p><img class="alignnone size-full wp-image-5551 lazy-loaded" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/3-eclipse-ide-for-java-ee-developers.jpg" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/3-eclipse-ide-for-java-ee-developers.jpg" alt="" width="628" height="645" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/3-eclipse-ide-for-java-ee-developers.jpg 628w, https://www.elconspirador.com/wp-content/uploads/2018/04/3-eclipse-ide-for-java-ee-developers-300x308.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/3-eclipse-ide-for-java-ee-developers-620x637.jpg 620w" data-srcset="" sizes="(max-width: 628px) 100vw, 628px"><noscript><img class="alignnone size-full wp-image-5551" src="https://www.elconspirador.com/wp-content/uploads/2018/04/3-eclipse-ide-for-java-ee-developers.jpg" alt="" width="628" height="645" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/3-eclipse-ide-for-java-ee-developers.jpg 628w, https://www.elconspirador.com/wp-content/uploads/2018/04/3-eclipse-ide-for-java-ee-developers-300x308.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/3-eclipse-ide-for-java-ee-developers-620x637.jpg 620w" sizes="(max-width: 628px) 100vw, 628px" /></noscript></p>
+<p><strong>Spring MVC</strong></p>
+<p style="text-align: justify;">En Eclipse para poder trabajar con la plantilla de proyecto de Spring, buscamos “Spring STS (Spring Source Tool Suite)” en el menú Help, Eclipse MarketPlace. Entre los resultados, instalamos “Spring Tool (aka Spring IDE and Spring Tool suite) 3.9.3.RELEASE”.</p>
+<p><img class="alignnone size-full wp-image-5552 lazy-loaded" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/4-Spring-tools-aka-spring-ide-and-spring-tool-suite.jpg" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/4-Spring-tools-aka-spring-ide-and-spring-tool-suite.jpg" alt="" width="723" height="720" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/4-Spring-tools-aka-spring-ide-and-spring-tool-suite.jpg 723w, https://www.elconspirador.com/wp-content/uploads/2018/04/4-Spring-tools-aka-spring-ide-and-spring-tool-suite-300x299.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/4-Spring-tools-aka-spring-ide-and-spring-tool-suite-620x617.jpg 620w" data-srcset="" sizes="(max-width: 723px) 100vw, 723px"><noscript><img class="alignnone size-full wp-image-5552" src="https://www.elconspirador.com/wp-content/uploads/2018/04/4-Spring-tools-aka-spring-ide-and-spring-tool-suite.jpg" alt="" width="723" height="720" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/4-Spring-tools-aka-spring-ide-and-spring-tool-suite.jpg 723w, https://www.elconspirador.com/wp-content/uploads/2018/04/4-Spring-tools-aka-spring-ide-and-spring-tool-suite-300x299.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/4-Spring-tools-aka-spring-ide-and-spring-tool-suite-620x617.jpg 620w" sizes="(max-width: 723px) 100vw, 723px" /></noscript></p>
+<p><strong>Crear el proyecto Spring MVC</strong></p>
+<p style="text-align: justify;">Después de instalar STS y reiniciar eclipse, nos vamos al menú File, New, Other… buscamos la carpeta de Spring y seleccionamos “Spring Legacy Project” en la siguiente ventana seleccionamos la plantilla “Spring MVC Project”. En esta publicación el nombre de mi proyecto será “ejemplo”.</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5553" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/5-Spring-legacy-project.jpg" alt="" width="520" height="722" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/5-Spring-legacy-project.jpg 520w, https://www.elconspirador.com/wp-content/uploads/2018/04/5-Spring-legacy-project-300x417.jpg 300w" sizes="(max-width: 520px) 100vw, 520px"><noscript><img class="alignnone size-full wp-image-5553" src="https://www.elconspirador.com/wp-content/uploads/2018/04/5-Spring-legacy-project.jpg" alt="" width="520" height="722" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/5-Spring-legacy-project.jpg 520w, https://www.elconspirador.com/wp-content/uploads/2018/04/5-Spring-legacy-project-300x417.jpg 300w" sizes="(max-width: 520px) 100vw, 520px" /></noscript></p>
+<p style="text-align: justify;">El paquete que contendrá los archivos proyecto será “com.elconspirador.ejemplo”. Deberemos de esperar un par de minutos mientras se descarga lo necesario para empezar a trabajar.</p>
+<p style="text-align: justify;">Una vez ha finalizado la creación del proyecto, observaremos la siguiente estructura (para verla cerramos la pestaña de inicio de Eclipse):</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5558" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/6-estructura-de-proyecto.jpg" alt="" width="344" height="704" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/6-estructura-de-proyecto.jpg 344w, https://www.elconspirador.com/wp-content/uploads/2018/04/6-estructura-de-proyecto-300x614.jpg 300w" sizes="(max-width: 344px) 100vw, 344px"><noscript><img class="alignnone size-full wp-image-5558" src="https://www.elconspirador.com/wp-content/uploads/2018/04/6-estructura-de-proyecto.jpg" alt="" width="344" height="704" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/6-estructura-de-proyecto.jpg 344w, https://www.elconspirador.com/wp-content/uploads/2018/04/6-estructura-de-proyecto-300x614.jpg 300w" sizes="(max-width: 344px) 100vw, 344px" /></noscript></p>
+<p><strong>Problemas iníciales</strong></p>
+<p style="text-align: justify;">Eclipse nos muestra el siguiente error:</p>
+<p style="text-align: justify;"><em><span style="color: #003366;">Archive for required library: ‘C:/Users/Jose/.m2/repository/org/springframework/spring-webmvc/3.1.1.RELEASE/spring-webmvc-3.1.1.RELEASE.jar’ in project ‘ejemplo’ cannot be read or is not a valid ZIP file</span></em></p>
+<p style="text-align: justify;">Algo que aprendí en mi investigación, por simplicidad, nunca eliminar la carpeta de dependencias de Maven “.m2”, varios blogs mencionan esto pero solo te provocará entrar en un relajo del cual ninguno te podrá salvar.</p>
+<p style="text-align: justify;">Para solucionar el actual problema, simplemente buscamos el archivo ‘spring-webmvc-3.1.1.RELEASE.jar’ en Google, lo descargamos y lo reemplazamos.</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5559" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/7-spring-webmvc-3.1.1.RELEASE.jar_.jpg" alt="" width="859" height="652" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/7-spring-webmvc-3.1.1.RELEASE.jar_.jpg 859w, https://www.elconspirador.com/wp-content/uploads/2018/04/7-spring-webmvc-3.1.1.RELEASE.jar_-300x228.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/7-spring-webmvc-3.1.1.RELEASE.jar_-620x471.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/7-spring-webmvc-3.1.1.RELEASE.jar_-768x583.jpg 768w" sizes="(max-width: 859px) 100vw, 859px"><noscript><img class="alignnone size-full wp-image-5559" src="https://www.elconspirador.com/wp-content/uploads/2018/04/7-spring-webmvc-3.1.1.RELEASE.jar_.jpg" alt="" width="859" height="652" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/7-spring-webmvc-3.1.1.RELEASE.jar_.jpg 859w, https://www.elconspirador.com/wp-content/uploads/2018/04/7-spring-webmvc-3.1.1.RELEASE.jar_-300x228.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/7-spring-webmvc-3.1.1.RELEASE.jar_-620x471.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/7-spring-webmvc-3.1.1.RELEASE.jar_-768x583.jpg 768w" sizes="(max-width: 859px) 100vw, 859px" /></noscript></p>
+<p style="text-align: justify;">Una vez reemplazamos el archivo, reiniciamos eclipse… y encontramos el siguiente error: “RequestMapping cannot be resolved to a type” para solucionarlo debemos de agregar la dependencia “spring-web”.</p>
+<p style="text-align: justify;">Las dependencias las agregamos en el archivo pom.xml situado en la raíz de nuestro proyecto, al hacer doble clic nos mostrará un editor grafico, nosotros seleccionamos la pestaña “pom.xml” para poder observar el código del archivo.</p>
+<p style="text-align: justify;">En este archivo agregamos la dependencia:</p>
+<pre class="brush: xml; gutter: true; first-line: 1"><em><span style="color: #003366;">&lt;dependency&gt;</span></em>
+<em><span style="color: #003366;">&lt;groupId&gt;org.springframework&lt;/groupId&gt;</span></em>
+<em><span style="color: #003366;">&lt;artifactId&gt;spring-web&lt;/artifactId&gt;</span></em>
+<em><span style="color: #003366;">&lt;version&gt;${org.springframework-version}&lt;/version&gt;</span></em>
+<em><span style="color: #003366;">&lt;/dependency&gt;</span></em></pre>
+<p><img class="lazy-hidden alignnone size-full wp-image-5560" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web.jpg" alt="" width="991" height="476" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web.jpg 991w, https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web-300x144.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web-620x298.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web-768x369.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web-940x452.jpg 940w" sizes="(max-width: 991px) 100vw, 991px"><noscript><img class="alignnone size-full wp-image-5560" src="https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web.jpg" alt="" width="991" height="476" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web.jpg 991w, https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web-300x144.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web-620x298.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web-768x369.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/8-spring-web-940x452.jpg 940w" sizes="(max-width: 991px) 100vw, 991px" /></noscript></p>
+<p style="text-align: justify;">Después selecciona el proyecto en la parte izquierda y haz clic derecho, busca la opción del menú desplegable “Maven” y haz clic en el ítem “Update Project”.</p>
+<p><strong>Los problemas persisten</strong></p>
+<p style="text-align: justify;">Como observarás, a pesar de saber cómo hacer la instalación y seguir las instrucciones más lógicas, los problemas siempre estarán presentes. El siguiente error ha aparecido:</p>
+<p><span style="color: #003366;"><em>Build path specifies execution environment JavaSE-1.6. There are no JREs installed in the workspace that are strictly compatible with this environment.</em></span></p>
+<p style="text-align: justify;">Para solucionar este error, realice varias cosas, empezando por cambiar la versión de java a utilizar en el archivo pom.xml:</p>
+<pre class="brush: xml; gutter: true; first-line: 1"><em><span style="color: #003366;">&lt;java-version&gt;1.8&lt;/java-version&gt;</span></em></pre>
+<p style="text-align: justify;">Y cambiando la versión JRE de Java haciendo clic derecho en el proyecto, propiedades, Java build Path. En la pestaña “Libraries” he eliminado Jave-SE-1.6 y he agregado la versión que tengo instalada en Add Library, JRE System Library y Workspace default JRE (jre.1.8.0_161).</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5561" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error.jpg" alt="" width="1094" height="609" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error.jpg 1094w, https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error-300x167.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error-620x345.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error-768x428.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error-940x523.jpg 940w" sizes="(max-width: 1094px) 100vw, 1094px"><noscript><img class="alignnone size-full wp-image-5561" src="https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error.jpg" alt="" width="1094" height="609" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error.jpg 1094w, https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error-300x167.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error-620x345.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error-768x428.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/9-java-error-940x523.jpg 940w" sizes="(max-width: 1094px) 100vw, 1094px" /></noscript></p>
+<p style="text-align: justify;">Luego, instalé Java Runtine Enviroment de la siguiente página (el archivo que instalé fue jre-8u161-windows-x64.exe)</p>
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html</a></p>
+<p style="text-align: justify;">Ok se que esto es un gran relajo, pero calma! No saldremos a la luz pero si estaremos avanzando unos cuantos pasillos en este tutorial. Lo siguiente que edité fue “Project facets”, está opción la encuentras al hacer clic derecho en la carpeta del proyecto (en Project explorer, parte izquierda de la ventana de Eclipse), y seleccionamos la versión 1.8 de java.</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5562" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets.jpg" alt="" width="997" height="692" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets.jpg 997w, https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets-300x208.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets-620x430.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets-768x533.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets-940x652.jpg 940w" sizes="(max-width: 997px) 100vw, 997px"><noscript><img class="alignnone size-full wp-image-5562" src="https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets.jpg" alt="" width="997" height="692" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets.jpg 997w, https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets-300x208.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets-620x430.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets-768x533.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/10-java-facets-940x652.jpg 940w" sizes="(max-width: 997px) 100vw, 997px" /></noscript></p>
+<p style="text-align: justify;">En la ventana de propiedades de nuestro projecto, también nos aseguramos que la opción “Java compiler” tenga seleccionada la versión 1.8 de java.</p>
+<p style="text-align: justify;">Para finalizar, el error “RequestMapping cannot be resolved to a type” persistía, así que descargué el archivo .jar del repositorio Maven en internet y lo reemplacé en mi sistema de archivos:</p>
+<p style="text-align: justify;">URL descarga:<br>
+<a href="https://mvnrepository.com/artifact/org.springframework/spring-web/3.1.1.RELEASE" target="_blank" rel="noopener">https://mvnrepository.com/artifact/org.springframework/spring-web/3.1.1.RELEASE</a></p>
+<p>Dirección a reemplazar en mi computadora:<br>
+C:\Users\Jose\.m2\repository\org\springframework\spring-web\3.1.1.RELEASE</p>
+<p><strong>Último problema</strong></p>
+<p style="text-align: justify;">Esto parece más un tutorial de cómo encontrar los problemas más ilógicos en Eclipse IDE, el siguiente problema que he encontrado es:</p>
+<p style="text-align: justify;"><span style="color: #003366;"><em>Error occured processing XML ‘Unable to load schema mappings from location [META-INF/spring.schemas]’. See Error Log for more details</em></span></p>
+<p style="text-align: justify;">Archivos del error: servlet-context y root-context. Para solucionar esto, en el archivo pom.xml cambiamos la versión de 3.1.1.RELEASE a 3.2.2.RELEASE:</p>
+<pre class="brush: xml; gutter: true; first-line: 1"><span style="color: #003366;"><em>&lt;org.springframework-version&gt;3.2.2.RELEASE&lt;/org.springframework-version&gt;</em></span></pre>
+<p><img class="lazy-hidden alignnone size-full wp-image-5563" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/11-context-error.jpg" alt="" width="688" height="361" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/11-context-error.jpg 688w, https://www.elconspirador.com/wp-content/uploads/2018/04/11-context-error-300x157.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/11-context-error-620x325.jpg 620w" sizes="(max-width: 688px) 100vw, 688px"><noscript><img class="alignnone size-full wp-image-5563" src="https://www.elconspirador.com/wp-content/uploads/2018/04/11-context-error.jpg" alt="" width="688" height="361" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/11-context-error.jpg 688w, https://www.elconspirador.com/wp-content/uploads/2018/04/11-context-error-300x157.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/11-context-error-620x325.jpg 620w" sizes="(max-width: 688px) 100vw, 688px" /></noscript></p>
+<p><strong>Dependencias de nuestro proyecto</strong></p>
+<p style="text-align: justify;">Las dependencias que vamos a usar son las siguientes (las agregamos a nuestro archivo pom.xml):</p>
+<pre class="brush: xml; gutter: true; first-line: 1"><span style="color: #003366;"><em>&lt;!-- Spring JDBC --&gt;</em></span>
+<span style="color: #003366;"><em>&lt;dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;groupId&gt;org.springframework&lt;/groupId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;version&gt;${org.springframework-version}&lt;/version&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;!-- MySQL database driver --&gt;</em></span>
+<span style="color: #003366;"><em>&lt;dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;groupId&gt;mysql&lt;/groupId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;version&gt;5.1.9&lt;/version&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/dependency&gt; </em></span>
+<span style="color: #003366;"><em>&lt;!-- tiles --&gt;</em></span>
+<span style="color: #003366;"><em>&lt;dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;groupId&gt;org.apache.tiles&lt;/groupId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;artifactId&gt;tiles-core&lt;/artifactId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;version&gt;2.1.2&lt;/version&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;groupId&gt;org.apache.tiles&lt;/groupId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;artifactId&gt;tiles-api&lt;/artifactId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;version&gt;2.1.2&lt;/version&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;groupId&gt;org.apache.tiles&lt;/groupId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;artifactId&gt;tiles-servlet&lt;/artifactId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;version&gt;2.1.2&lt;/version&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;groupId&gt;org.apache.tiles&lt;/groupId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;artifactId&gt;tiles-jsp&lt;/artifactId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;version&gt;2.1.2&lt;/version&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/dependency&gt; </em></span>
+<span style="color: #003366;"><em>&lt;!-- validation --&gt;</em></span>
+<span style="color: #003366;"><em>&lt;dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;groupId&gt;javax.validation&lt;/groupId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;artifactId&gt;validation-api&lt;/artifactId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;version&gt;1.1.0.Final&lt;/version&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/dependency&gt; </em></span>
+<span style="color: #003366;"><em>&lt;!-- hibernate --&gt;</em></span>
+<span style="color: #003366;"><em>&lt;dependency&gt;</em></span>
+<span style="color: #003366;"><em>&lt;groupId&gt;org.hibernate&lt;/groupId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;artifactId&gt;hibernate-validator&lt;/artifactId&gt;</em></span>
+<span style="color: #003366;"><em>&lt;version&gt;4.3.1.Final&lt;/version&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/dependency&gt;</em></span></pre>
+<p style="text-align: justify;">Javax.validation nos permite utilizar expresiones regulares para validar la información que guardaremos en la DB. Hibernate contiene funciones de validación que serán de utilidad en el proyecto, por ejemplo, validación de correo electrónico.</p>
+<p><strong>Base de datos MySQL</strong></p>
+<p style="text-align: justify;">MySQL la tengo instalada en un servidor Ubuntu, en una maquina virtual. Utilicé el editor HeidiSQL para crear la base de datos “ejemplo” con la siguiente tabla:</p>
+<pre class="brush: sql; gutter: true; first-line: 1"><em><span style="color: #003366;">CREATE TABLE usuario (</span></em>
+<em><span style="color: #003366;">id BIGINT(20) unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,</span></em>
+<em><span style="color: #003366;">correo varchar(254) DEFAULT '',</span></em>
+<em><span style="color: #003366;">password VARCHAR(100) NOT NULL,</span></em>
+<em><span style="color: #003366;">rol VARCHAR(50) DEFAULT 'usuario',</span></em>
+<em><span style="color: #003366;">creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span></em>
+<em><span style="color: #003366;">)ENGINE=INNODB;</span></em>
+
+<em><span style="color: #003366;">ALTER TABLE usuario ADD UNIQUE INDEX usuario_correo (correo);</span></em>
+
+<em><span style="color: #003366;">/* elconspirador */</span></em>
+<em><span style="color: #003366;">INSERT INTO usuario (correo, password, rol) VALUES ('josedalvik@gmail.com', '09ab5f442a52f2f9e297c7731c4220f5648e6c32a23ec14b7f3b72da762bbcb3', 'admin');</span></em></pre>
+<p><img class="lazy-hidden alignnone size-full wp-image-5564" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server.jpg" alt="" width="1366" height="690" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server.jpg 1366w, https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server-300x152.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server-620x313.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server-768x388.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server-940x475.jpg 940w" sizes="(max-width: 1366px) 100vw, 1366px"><noscript><img class="alignnone size-full wp-image-5564" src="https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server.jpg" alt="" width="1366" height="690" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server.jpg 1366w, https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server-300x152.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server-620x313.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server-768x388.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/12-mysql-server-940x475.jpg 940w" sizes="(max-width: 1366px) 100vw, 1366px" /></noscript></p>
+<p><strong>Entidad Usuario</strong></p>
+<p style="text-align: justify;">La entidad Usuario almacenará los registros de la tabla Usuario, para ordenar los archivos, colocaré todas las entidades en una carpeta llamada entity:</p>
+<p style="text-align: justify;">Project explorer, ejemplo (nombre del proyecto), src, main, java, (com, elconspirador, ejemplo) {es el nombre del paquete} hacemos clic derecho y agregamos la carpeta “entity”.</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5565" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/13-entity.jpg" alt="" width="884" height="660" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/13-entity.jpg 884w, https://www.elconspirador.com/wp-content/uploads/2018/04/13-entity-300x224.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/13-entity-620x463.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/13-entity-768x573.jpg 768w" sizes="(max-width: 884px) 100vw, 884px"><noscript><img class="alignnone size-full wp-image-5565" src="https://www.elconspirador.com/wp-content/uploads/2018/04/13-entity.jpg" alt="" width="884" height="660" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/13-entity.jpg 884w, https://www.elconspirador.com/wp-content/uploads/2018/04/13-entity-300x224.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/13-entity-620x463.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/13-entity-768x573.jpg 768w" sizes="(max-width: 884px) 100vw, 884px" /></noscript></p>
+<p style="text-align: justify;">Ahora, en el paquete que hemos agregado, hacemos clic derecho y agregamos Usuario.java.</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5566" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad.jpg" alt="" width="974" height="665" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad.jpg 974w, https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad-300x205.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad-620x423.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad-768x524.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad-940x642.jpg 940w" sizes="(max-width: 974px) 100vw, 974px"><noscript><img class="alignnone size-full wp-image-5566" src="https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad.jpg" alt="" width="974" height="665" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad.jpg 974w, https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad-300x205.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad-620x423.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad-768x524.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/14-clase-entidad-940x642.jpg 940w" sizes="(max-width: 974px) 100vw, 974px" /></noscript></p>
+<p><strong>Entidad Usuario</strong></p>
+<pre class="brush: java; gutter: true; first-line: 1"><span style="color: #003366;"><em>package com.elconspirador.ejemplo.entity;</em></span>
+
+<span style="color: #003366;"><em>import javax.validation.constraints.Size;</em></span>
+
+<span style="color: #003366;"><em>import org.hibernate.validator.constraints.Email;</em></span>
+
+<span style="color: #003366;"><em>public class Usuario {</em></span>
+
+<span style="color: #003366;"><em>private int id;</em></span>
+
+<span style="color: #003366;"><em>@Email(message="Formato de correo no valido")</em></span>
+<span style="color: #003366;"><em>@Size(min = 1, max = 254, message="Rango permitido de 1 a 254 caracteres")</em></span>
+<span style="color: #003366;"><em>private String correo;</em></span>
+
+<span style="color: #003366;"><em>@Size(min = 1, max = 100, message="Rango permitido de 1 a 100 caracteres")</em></span>
+<span style="color: #003366;"><em>private String password;</em></span>
+
+<span style="color: #003366;"><em>@Size(min = 1, max = 50, message="Rango permitido de 1 a 50 caracteres")</em></span>
+<span style="color: #003366;"><em>private String rol;</em></span>
+
+<span style="color: #003366;"><em>private String creacion;</em></span>
+
+<span style="color: #003366;"><em>}</em></span></pre>
+<p style="text-align: justify;">Para agregar los getters y setters, en el menú superior seleccionamos “Source” y hacemos clic en “Generate getters and setters”. Las validaciones las agregamos en las variables que creamos convenientes.</p>
+<p><strong>Objeto de acceso a los datos DAO</strong></p>
+<p style="text-align: justify;">Ahora que tenemos la entidad Usuario, necesitamos una clase que nos permita hacer operaciones en la base de datos, para seguir con el orden agregamos otra carpeta que se llame “dao” y agregamos la clase “UsuarioDao.java”.</p>
+<pre class="brush: java; gutter: true; first-line: 1"><span style="color: #003366;"><em>package com.elconspirador.ejemplo.dao;</em></span>
+
+<span style="color: #003366;"><em>import java.sql.ResultSet;</em></span>
+<span style="color: #003366;"><em>import java.sql.SQLException;</em></span>
+<span style="color: #003366;"><em>import java.util.List;</em></span>
+<span style="color: #003366;"><em>import org.springframework.jdbc.core.BeanPropertyRowMapper;</em></span>
+<span style="color: #003366;"><em>import org.springframework.jdbc.core.JdbcTemplate;</em></span>
+<span style="color: #003366;"><em>import org.springframework.jdbc.core.RowMapper;</em></span>
+
+<span style="color: #003366;"><em>import com.elconspirador.ejemplo.entity.Usuario;</em></span>
+
+<span style="color: #003366;"><em>public class UsuarioDao {</em></span>
+<span style="color: #003366;"><em>JdbcTemplate model;</em></span>
+
+<span style="color: #003366;"><em>public void setTemplate(JdbcTemplate model) {</em></span>
+<span style="color: #003366;"><em>this.model = model;</em></span>
+<span style="color: #003366;"><em>}</em></span>
+
+<span style="color: #003366;"><em>public Usuario login(String correo, String password) {</em></span>
+<span style="color: #003366;"><em>String sql = "SELECT * FROM usuario WHERE correo = ? AND password = ?;";</em></span>
+<span style="color: #003366;"><em>try {</em></span>
+<span style="color: #003366;"><em>return model.queryForObject(sql, new Object[] { correo, password }, new BeanPropertyRowMapper&lt;Usuario&gt;(Usuario.class));</em></span>
+<span style="color: #003366;"><em>}catch(Exception e) {</em></span>
+<span style="color: #003366;"><em>return null;</em></span>
+<span style="color: #003366;"><em>}</em></span>
+<span style="color: #003366;"><em>}</em></span>
+
+<span style="color: #003366;"><em>}</em></span></pre>
+<p><strong>Conexión DAO y MySQL</strong></p>
+<p style="text-align: justify;">Hasta ahora observamos como DAO utiliza la entidad para poder hacer operaciones en la base de datos, ¿pero como hace la conexión DAO con MySQL?</p>
+<p style="text-align: justify;">La conexión, la relación entre la clase DAO y la base de datos se establece en el archivo ejemplo, src, main, webapp, WEB-INF, spring, root-context.xml</p>
+<pre class="brush: xml; gutter: true; first-line: 1"><em><span style="color: #003366;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></em>
+<em><span style="color: #003366;">&lt;beans xmlns="http://www.springframework.org/schema/beans"</span></em>
+<em><span style="color: #003366;">xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</span></em>
+<em><span style="color: #003366;">xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;!-- Root Context: defines shared resources visible to all other web components --&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource"&gt;</span></em>
+<em><span style="color: #003366;">&lt;property name="driverClassName" value="com.mysql.jdbc.Driver" /&gt;</span></em>
+<em><span style="color: #003366;">&lt;property name="url" value="jdbc:mysql://192.168.56.101:3306/ejemplo" /&gt;</span></em>
+<em><span style="color: #003366;">&lt;property name="username" value="xxxxxx" /&gt;</span></em>
+<em><span style="color: #003366;">&lt;property name="password" value="yyyyy" /&gt;</span></em>
+<em><span style="color: #003366;">&lt;/bean&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate"&gt;</span></em>
+<em><span style="color: #003366;">&lt;property name="dataSource" ref="ds"&gt;&lt;/property&gt;</span></em>
+<em><span style="color: #003366;">&lt;/bean&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;bean id="model_usuario" class="com.elconspirador.ejemplo.dao.UsuarioDao"&gt;</span></em>
+<em><span style="color: #003366;">&lt;property name="template" ref="jt"&gt;&lt;/property&gt;</span></em>
+<em><span style="color: #003366;">&lt;/bean&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;/beans&gt;</span></em></pre>
+<p style="text-align: justify;">De primero observamos cómo se realiza la conexión, después cómo se establece la plantilla JdbcTemplate y por último cómo se relaciona la clase DAO con la plantilla JdbcTemplate.</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5567" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context.jpg" alt="" width="1151" height="626" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context.jpg 1151w, https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context-300x163.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context-620x337.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context-768x418.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context-940x511.jpg 940w" sizes="(max-width: 1151px) 100vw, 1151px"><noscript><img class="alignnone size-full wp-image-5567" src="https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context.jpg" alt="" width="1151" height="626" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context.jpg 1151w, https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context-300x163.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context-620x337.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context-768x418.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/15-root-context-940x511.jpg 940w" sizes="(max-width: 1151px) 100vw, 1151px" /></noscript></p>
+<p><strong>Ordenando el controlador</strong></p>
+<p style="text-align: justify;">Antes de manipular el controlador, agregamos a nuestro paquete Java la carpeta “controller” y agregamos la clase HomeController.java dentro de la misma.</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5568" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/16-orden-establecido.jpg" alt="" width="407" height="299" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/16-orden-establecido.jpg 407w, https://www.elconspirador.com/wp-content/uploads/2018/04/16-orden-establecido-300x220.jpg 300w" sizes="(max-width: 407px) 100vw, 407px"><noscript><img class="alignnone size-full wp-image-5568" src="https://www.elconspirador.com/wp-content/uploads/2018/04/16-orden-establecido.jpg" alt="" width="407" height="299" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/16-orden-establecido.jpg 407w, https://www.elconspirador.com/wp-content/uploads/2018/04/16-orden-establecido-300x220.jpg 300w" sizes="(max-width: 407px) 100vw, 407px" /></noscript></p>
+<p><strong>Apache Tiles</strong></p>
+<p style="text-align: justify;">Antes de hacer una operación con la base de datos, vamos a utilizar plantillas HTML.</p>
+<p><strong>Plantillas HTML: header y footer</strong></p>
+<p style="text-align: justify;">Agregamos la carpeta “plantilla” en la carpeta “views”, dentro colocaremos nuestros archivos cabecera y pie de página.</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5569" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/17-plantillas-html.jpg" alt="" width="408" height="476" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/17-plantillas-html.jpg 408w, https://www.elconspirador.com/wp-content/uploads/2018/04/17-plantillas-html-300x350.jpg 300w" sizes="(max-width: 408px) 100vw, 408px"><noscript><img class="alignnone size-full wp-image-5569" src="https://www.elconspirador.com/wp-content/uploads/2018/04/17-plantillas-html.jpg" alt="" width="408" height="476" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/17-plantillas-html.jpg 408w, https://www.elconspirador.com/wp-content/uploads/2018/04/17-plantillas-html-300x350.jpg 300w" sizes="(max-width: 408px) 100vw, 408px" /></noscript></p>
+<p style="text-align: justify;">El código para el archivo header.jsp es el siguiente:</p>
+<pre class="brush: html; gutter: true; first-line: 1"><em><span style="color: #003366;">&lt;!DOCTYPE html&gt;</span></em>
+<em><span style="color: #003366;">&lt;html lang="en"&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;head&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;meta charset="utf-8"&gt;</span></em>
+<em><span style="color: #003366;">&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</span></em>
+<em><span style="color: #003366;">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</span></em>
+<em><span style="color: #003366;">&lt;meta name="description" content=""&gt;</span></em>
+<em><span style="color: #003366;">&lt;meta name="author" content=""&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;title&gt;Aplicación de prueba&lt;/title&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;!-- Bootstrap Core CSS --&gt;</span></em>
+<em><span style="color: #003366;">&lt;link href="${pageContext.request.contextPath}/css/css.css" rel="stylesheet"&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;!-- Bootstrap Core CSS --&gt;</span></em>
+<em><span style="color: #003366;">&lt;link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet"&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;!-- MetisMenu CSS --&gt;</span></em>
+<em><span style="color: #003366;">&lt;link href="${pageContext.request.contextPath}/css/metisMenu.min.css" rel="stylesheet"&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;!-- Custom CSS --&gt;</span></em>
+<em><span style="color: #003366;">&lt;link href="${pageContext.request.contextPath}/css/sb-admin-2.css" rel="stylesheet"&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;!-- Custom Fonts --&gt;</span></em>
+<em><span style="color: #003366;">&lt;link href="${pageContext.request.contextPath}/css/font-awesome.min.css" rel="stylesheet" type="text/css"&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;!-- Datatables --&gt;</span></em>
+<em><span style="color: #003366;">&lt;link rel="stylesheet" href="${pageContext.request.contextPath}/css/dataTables.bootstrap.css" type="text/css"&gt;</span></em>
+<em><span style="color: #003366;">&lt;link rel="stylesheet" href="${pageContext.request.contextPath}/css/dataTables.responsive.css" type="text/css"&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;</span></em>
+<em><span style="color: #003366;">&lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;</span></em>
+<em><span style="color: #003366;">&lt;!--[if lt IE 9]&gt;</span></em>
+<em><span style="color: #003366;">&lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;</span></em>
+<em><span style="color: #003366;">&lt;script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;</span></em>
+<em><span style="color: #003366;">&lt;![endif]--&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;/head&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;body&gt;</span></em></pre>
+<p style="text-align: justify;">El código para el archivo footer.jsp es el siguiente:</p>
+<pre class="brush: html; gutter: true; first-line: 1"><em><span style="color: #003366;">&lt;!-- jQuery --&gt;</span></em>
+<em><span style="color: #003366;">&lt;script src="${pageContext.request.contextPath}/js/jquery.min.js" type="text/javascript" &gt;&lt;/script&gt;</span></em>
+<em><span style="color: #003366;">&lt;!-- Bootstrap Core JavaScript --&gt;</span></em>
+<em><span style="color: #003366;">&lt;script src="${pageContext.request.contextPath}/js/bootstrap.min.js" type="text/javascript" &gt;&lt;/script&gt;</span></em>
+<em><span style="color: #003366;">&lt;!-- Metis Menu Plugin JavaScript --&gt;</span></em>
+<em><span style="color: #003366;">&lt;script src="${pageContext.request.contextPath}/js/metisMenu.min.js" type="text/javascript" &gt;&lt;/script&gt;</span></em>
+<em><span style="color: #003366;">&lt;!-- Custom Theme JavaScript --&gt;</span></em>
+<em><span style="color: #003366;">&lt;script src="${pageContext.request.contextPath}/js/sb-admin-2.js" type="text/javascript" &gt;&lt;/script&gt;</span></em>
+<em><span style="color: #003366;">&lt;!-- Datatables --&gt;</span></em>
+<em><span style="color: #003366;">&lt;script src="${pageContext.request.contextPath}/js/jquery.dataTables.min.js" type="text/javascript" &gt;&lt;/script&gt;</span></em>
+<em><span style="color: #003366;">&lt;script src="${pageContext.request.contextPath}/js/dataTables.bootstrap.min.js" type="text/javascript" &gt;&lt;/script&gt;</span></em>
+<em><span style="color: #003366;">&lt;script src="${pageContext.request.contextPath}/js/dataTables.responsive.js" type="text/javascript" &gt;&lt;/script&gt;</span></em>
+
+<em><span style="color: #003366;">&lt;!-- js --&gt;</span></em>
+<em><span style="color: #003366;">&lt;script src="${pageContext.request.contextPath}/js/js.js"&gt;&lt;/script&gt;</span></em>
+<em><span style="color: #003366;">&lt;/body&gt;</span></em>
+<em><span style="color: #003366;">&lt;/html&gt;</span></em></pre>
+<p style="text-align: justify;">Seguramente hasta ahora has observado tres cosas:</p>
+<ol>
+<li style="text-align: justify;">La variable pageContext.request.contextPath es la URL de nuestra aplicación.</li>
+<li style="text-align: justify;">${variable} en PHP es el equivalente a utilizar &lt;?=$variable?&gt;</li>
+<li style="text-align: justify;">Si! en este ejemplo utilizaremos la plantilla sb-admin2 de bootstrap.</li>
+</ol>
+<p><strong>Donde copiamos los archivos JS y CSS?</strong></p>
+<p style="text-align: justify;">Los archivos de estilo, javascript, fuentes e imágenes las agregamos en la carpeta resources:</p>
+<p style="text-align: justify;">Explorador del proyecto, ejemplo, src, main, webapp, resources</p>
+<p style="text-align: justify;">Para hacer esto posible, debemos de modificar el archivo: Explorador del proyecto, ejemplo, src, main, webapp, WEB-INF, spring, appServlet, servlet-context. La siguiente línea debe quedar así:</p>
+<pre class="brush: xml; gutter: true; first-line: 1"><span style="color: #003366;"><em>&lt;resources mapping="/**" location="/resources/" /&gt;</em></span></pre>
+<p><img class="lazy-hidden alignnone size-full wp-image-5570" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files.jpg" alt="" width="1061" height="632" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files.jpg 1061w, https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files-300x179.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files-620x369.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files-768x457.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files-940x560.jpg 940w" sizes="(max-width: 1061px) 100vw, 1061px"><noscript><img class="alignnone size-full wp-image-5570" src="https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files.jpg" alt="" width="1061" height="632" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files.jpg 1061w, https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files-300x179.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files-620x369.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files-768x457.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/18-css-js-files-940x560.jpg 940w" sizes="(max-width: 1061px) 100vw, 1061px" /></noscript></p>
+<p><strong>Archivo tiles.xml</strong></p>
+<p style="text-align: justify;">A continuación creamos el archivo tiles.xml en Explorador del proyecto, ejemplo, src, main, webapp, WEB-INF. Debe de estar junto al archivo web.xml. El contenido de este archivo debe de ser el siguiente:</p>
+<pre class="brush: xml; gutter: true; first-line: 1"><span style="color: #003366;"><em>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</em></span>
+<span style="color: #003366;"><em>&lt;!DOCTYPE tiles-definitions PUBLIC</em></span>
+<span style="color: #003366;"><em>"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"</em></span>
+<span style="color: #003366;"><em>"http://tiles.apache.org/dtds/tiles-config_2_0.dtd"&gt;</em></span>
+<span style="color: #003366;"><em>&lt;tiles-definitions&gt;</em></span>
+
+<span style="color: #003366;"><em>&lt;definition name="plantilla " template="/WEB-INF/views/plantilla/layout.jsp"&gt;</em></span>
+<span style="color: #003366;"><em>&lt;put-attribute name="header" value="/WEB-INF/views/plantilla/header.jsp" /&gt;</em></span>
+<span style="color: #003366;"><em>&lt;put-attribute name="body" value="" /&gt;</em></span>
+<span style="color: #003366;"><em>&lt;put-attribute name="footer" value="/WEB-INF/views/plantilla/footer.jsp" /&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/definition&gt;</em></span>
+
+<span style="color: #003366;"><em>&lt;definition name="home" extends="plantilla "&gt;</em></span>
+<span style="color: #003366;"><em>&lt;put-attribute name="body" value="/WEB-INF/views/home.jsp" /&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/definition&gt;</em></span>
+
+<span style="color: #003366;"><em>&lt;/tiles-definitions&gt;</em></span></pre>
+<p><img class="lazy-hidden alignnone size-full wp-image-5571" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file.jpg" alt="" width="1163" height="585" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file.jpg 1163w, https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file-300x151.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file-620x312.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file-768x386.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file-940x473.jpg 940w" sizes="(max-width: 1163px) 100vw, 1163px"><noscript><img class="alignnone size-full wp-image-5571" src="https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file.jpg" alt="" width="1163" height="585" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file.jpg 1163w, https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file-300x151.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file-620x312.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file-768x386.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/19-tiles-file-940x473.jpg 940w" sizes="(max-width: 1163px) 100vw, 1163px" /></noscript></p>
+<p style="text-align: justify;">Observemos las cosas en orden, en el archivo XML se definen dos objetos: plantilla y home. La definición plantilla es el archivo layout.jsp (que todavía NO hemos creado), a este archivo le envía tres atributos: header, body y footer.</p>
+<p style="text-align: justify;">La definición home (utilizado por nuestro controlador HomeController) extiende el objeto “plantilla” y a este objeto le envía el atributo “body” con el valor home.jsp.</p>
+<p style="text-align: justify;">Ok, entonces nuestro coeficiente intelectual nos ha hecho entender: plantilla define los atributos por defecto y cada nueva definición podrá cambiar el atributo body.</p>
+<p><strong>Agregando tiles.xml a nuestro proyecto</strong></p>
+<p style="text-align: justify;">Para registrar la configuración de tiles.xml en nuestro proyecto, editamos el archivo servlet-context, ubicado en: explorador de proyectos, ejemplo, src, main, webapp, WEB-INF, spring, appServlet.</p>
+<p style="text-align: justify;">A servlet-context le agregamos el siguiente código XML:</p>
+<pre class="brush: xml; gutter: true; first-line: 1"><span style="color: #003366;"><em>&lt;beans:bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver"&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:property name="viewClass"&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:value&gt;</em></span>
+<span style="color: #003366;"><em>org.springframework.web.servlet.view.tiles2.TilesView</em></span>
+<span style="color: #003366;"><em>&lt;/beans:value&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/beans:property&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/beans:bean&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:property name="definitions"&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:list&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:value&gt;/WEB-INF/tiles.xml&lt;/beans:value&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/beans:list&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/beans:property&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/beans:bean&gt;</em></span></pre>
+<p><strong>Servlet-context.xml</strong></p>
+<p style="text-align: justify;">Para resumir, este archivo quedará de la siguiente manera:</p>
+<pre class="brush: xml; gutter: true; first-line: 1"><span style="color: #003366;"><em>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:beans xmlns="http://www.springframework.org/schema/mvc"</em></span>
+<span style="color: #003366;"><em>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</em></span>
+<span style="color: #003366;"><em>xmlns:beans="http://www.springframework.org/schema/beans"</em></span>
+<span style="color: #003366;"><em>xmlns:context="http://www.springframework.org/schema/context"</em></span>
+<span style="color: #003366;"><em>xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd</em></span>
+<span style="color: #003366;"><em>http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd</em></span>
+<span style="color: #003366;"><em>http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"&gt;</em></span>
+
+<span style="color: #003366;"><em>&lt;!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure --&gt;</em></span>
+
+<span style="color: #003366;"><em>&lt;!-- Enables the Spring MVC @Controller programming model --&gt;</em></span>
+<span style="color: #003366;"><em>&lt;annotation-driven /&gt;</em></span>
+
+<span style="color: #003366;"><em>&lt;!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory --&gt;</em></span>
+<span style="color: #003366;"><em>&lt;resources mapping="/**" location="/resources/" /&gt;</em></span>
+
+<span style="color: #003366;"><em>&lt;!-- Tiles --&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver"&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:property name="viewClass"&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:value&gt;</em></span>
+<span style="color: #003366;"><em>org.springframework.web.servlet.view.tiles2.TilesView</em></span>
+<span style="color: #003366;"><em>&lt;/beans:value&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/beans:property&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/beans:bean&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:property name="definitions"&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:list&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:value&gt;/WEB-INF/tiles.xml&lt;/beans:value&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/beans:list&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/beans:property&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/beans:bean&gt;</em></span>
+
+<span style="color: #003366;"><em>&lt;!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory --&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:property name="prefix" value="/WEB-INF/views/" /&gt;</em></span>
+<span style="color: #003366;"><em>&lt;beans:property name="suffix" value=".jsp" /&gt;</em></span>
+<span style="color: #003366;"><em>&lt;/beans:bean&gt;</em></span>
+
+<span style="color: #003366;"><em>&lt;context:component-scan base-package="com.elconspirador.ejemplo" /&gt;</em></span>
+
+<span style="color: #003366;"><em>&lt;/beans:beans&gt;</em></span></pre>
+<p><strong>Layout.jsp</strong></p>
+<p style="text-align: justify;">Su funcionamiento es muy básico, deja que el archivo tiles.xml defina los valores a imprimir:</p>
+<pre class="brush: java; gutter: true; first-line: 1"><span style="color: #003366;"><em>&lt;%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%&gt;</em></span>
+<span style="color: #003366;"><em>&lt;tiles:insertAttribute name="header" /&gt;</em></span>
+<span style="color: #003366;"><em>&lt;tiles:insertAttribute name="body" /&gt;</em></span>
+<span style="color: #003366;"><em>&lt;tiles:insertAttribute name="footer" /&gt;</em></span></pre>
+<p><strong>Home.jsp</strong></p>
+<p style="text-align: justify;">Esta es la vista utilizada por HomeController.java, aquí utilizamos el tag Form de Spring, esto permite enviar entidades a un formulario y mostrar sus valores en los campos HTML:</p>
+<pre class="brush: html; gutter: true; first-line: 1"><em><span style="color: #003366;">&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %&gt;</span></em>
+<em><span style="color: #003366;">&lt;%@ page session="true" %&gt;</span></em>
+<em><span style="color: #003366;">&lt;%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%&gt; </span></em>
+<em><span style="color: #003366;">&lt;div class="container"&gt;</span></em>
+<em><span style="color: #003366;">&lt;div class="row"&gt;</span></em>
+<em><span style="color: #003366;">&lt;div class="col-md-4 col-md-offset-4"&gt;</span></em>
+<em><span style="color: #003366;">&lt;div class="login-panel panel panel-default"&gt;</span></em>
+<em><span style="color: #003366;">&lt;div class="panel-heading"&gt;</span></em>
+<em><span style="color: #003366;">&lt;h3 class="panel-title"&gt;Inicio de sesión&lt;/h3&gt;</span></em>
+<em><span style="color: #003366;">&lt;/div&gt;</span></em>
+<em><span style="color: #003366;">&lt;div class="panel-body"&gt;</span></em>
+<em><span style="color: #003366;">&lt;form:form method="POST" action="login" modelAttribute="usuario"&gt;</span></em>
+<em><span style="color: #003366;">&lt;fieldset&gt;</span></em>
+<em><span style="color: #003366;">&lt;div class="form-group"&gt;</span></em>
+<em><span style="color: #003366;">&lt;form:input cssClass="form-control" path="correo" /&gt;</span></em>
+<em><span style="color: #003366;">&lt;form:errors element="div" path="correo" cssClass="alert alert-danger" /&gt;</span></em>
+<em><span style="color: #003366;">&lt;/div&gt;</span></em>
+<em><span style="color: #003366;">&lt;div class="form-group"&gt;</span></em>
+<em><span style="color: #003366;">&lt;form:password cssClass="form-control" path="password" /&gt;</span></em>
+<em><span style="color: #003366;">&lt;form:errors element="div" path="password" cssClass="alert alert-danger" /&gt;</span></em>
+<em><span style="color: #003366;">&lt;/div&gt;</span></em>
+<em><span style="color: #003366;">&lt;input type="submit" class="btn btn-lg btn-success btn-block" value="Iniciar sesión" /&gt;</span></em>
+<em><span style="color: #003366;">&lt;/fieldset&gt;</span></em>
+<em><span style="color: #003366;">&lt;c:choose&gt;</span></em>
+<em><span style="color: #003366;">&lt;c:when test="${error==1}"&gt;</span></em>
+<em><span style="color: #003366;">&lt;div class="alert alert-danger"&gt;</span></em>
+<em><span style="color: #003366;">Completa correctamente el formulario.</span></em>
+<em><span style="color: #003366;">&lt;/div&gt;</span></em>
+<em><span style="color: #003366;">&lt;/c:when&gt;</span></em>
+<em><span style="color: #003366;">&lt;c:when test="${error==2}"&gt;</span></em>
+<em><span style="color: #003366;">&lt;div class="alert alert-danger"&gt;</span></em>
+<em><span style="color: #003366;">Datos de acceso incorrectos.</span></em>
+<em><span style="color: #003366;">&lt;/div&gt;</span></em>
+<em><span style="color: #003366;">&lt;/c:when&gt;</span></em>
+<em><span style="color: #003366;">&lt;c:when test="${error==3}"&gt;</span></em>
+<em><span style="color: #003366;">&lt;div class="alert alert-danger"&gt;</span></em>
+<em><span style="color: #003366;">Ha sucedido un error, por favor intentalo de nuevo.</span></em>
+<em><span style="color: #003366;">&lt;/div&gt;</span></em>
+<em><span style="color: #003366;">&lt;/c:when&gt;</span></em>
+<em><span style="color: #003366;">&lt;/c:choose&gt;</span></em>
+<em><span style="color: #003366;">&lt;/form:form&gt;</span></em>
+<em><span style="color: #003366;">&lt;/div&gt;</span></em>
+<em><span style="color: #003366;">&lt;/div&gt;</span></em>
+<em><span style="color: #003366;">&lt;/div&gt;</span></em>
+<em><span style="color: #003366;">&lt;/div&gt;</span></em>
+<em><span style="color: #003366;">&lt;/div&gt;</span></em></pre>
+<p style="text-align: justify;">La variable error utiliza la instrucción &lt;c:when test=”${condición}”&gt;&lt;/c:when&gt;, la cual funciona gracias al tag c de Spring. Las clases y estilos CSS utilizadas en esta vista son propias de la plantilla Sb-admin2 de Bootstrap. El tag form de Spring es muy limitado, así que debemos de sacrificar algunas propiedades HTML y CSS para hacerlo funcionar.</p>
+<p><strong>HomeController.java, mostrando un simple formulario</strong></p>
+<p style="text-align: justify;">Hasta ahora no utilizaremos la conexión MySQL, solo mostraremos un formulario HTML en la aplicación:</p>
+<pre class="brush: java; gutter: true; first-line: 1"><span style="color: #003366;"><em>package com.elconspirador.ejemplo.controller;</em></span>
+
+<span style="color: #003366;"><em>import java.util.Locale;</em></span>
+
+<span style="color: #003366;"><em>import org.springframework.stereotype.Controller;</em></span>
+<span style="color: #003366;"><em>import org.springframework.ui.Model;</em></span>
+
+<span style="color: #003366;"><em>import org.springframework.web.bind.annotation.RequestMapping;</em></span>
+<span style="color: #003366;"><em>import org.springframework.web.bind.annotation.RequestMethod;</em></span>
+
+<span style="color: #003366;"><em>import com.elconspirador.ejemplo.entity.Usuario;</em></span>
+
+<span style="color: #003366;"><em>/**</em></span>
+<span style="color: #003366;"><em>* Handles requests for the application home page.</em></span>
+<span style="color: #003366;"><em>*/</em></span>
+<span style="color: #003366;"><em>@Controller</em></span>
+<span style="color: #003366;"><em>public class HomeController {</em></span>
+
+<span style="color: #003366;"><em>/**</em></span>
+<span style="color: #003366;"><em>* Simply selects the home view to render by returning its name.</em></span>
+<span style="color: #003366;"><em>*/</em></span>
+<span style="color: #003366;"><em>@RequestMapping(value = "/", method = RequestMethod.GET)</em></span>
+<span style="color: #003366;"><em>public String home(Locale locale, Model model, Usuario usuario) {</em></span>
+<span style="color: #003366;"><em>model.addAttribute("error", 0); </em></span>
+<span style="color: #003366;"><em>model.addAttribute("usuario", usuario);</em></span>
+
+
+<span style="color: #003366;"><em>return "home";</em></span>
+<span style="color: #003366;"><em>}</em></span>
+
+<span style="color: #003366;"><em>}</em></span></pre>
+<p style="text-align: justify;">En la función home, observamos la entidad Usuario, esto permite inicializar el formulario con sus valores por defecto.</p>
+<p style="text-align: justify;">Para ver el ejemplo que tenemos hasta ahora, corremos la aplicación y seleccionamos Tomcat v8.0 en la categoría Apache. Al hacer clic en siguiente, seleccionamos “Download and install”. La ubicación del servidor, para mantener las cosas en orden recomiendo hacerla en el actual workspace utilizado: C:\Users\Jose\eclipse-workspace\Apache</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5572" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat.jpg" alt="" width="1073" height="725" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat.jpg 1073w, https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat-300x203.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat-620x419.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat-768x519.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat-940x635.jpg 940w" sizes="(max-width: 1073px) 100vw, 1073px"><noscript><img class="alignnone size-full wp-image-5572" src="https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat.jpg" alt="" width="1073" height="725" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat.jpg 1073w, https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat-300x203.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat-620x419.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat-768x519.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/20-apache-tomcat-940x635.jpg 940w" sizes="(max-width: 1073px) 100vw, 1073px" /></noscript></p>
+<p style="text-align: justify;">Al finalizar, simplemente abrimos nuestro navegador web y escribimos http://localhost:8080/ejemplo</p>
+<p><strong>Eclipse IDE de nuevo nos muestra errores</strong></p>
+<p style="text-align: justify;">Al momento de correr la aplicación, nos mostró el siguiente error:</p>
+<p style="text-align: justify;"><span style="color: #003366;"><em>org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file HomeController.class; nested exception is org.springframework.core.NestedIOException: ASM ClassReader failed to parse class file – probably due to a new Java class file version that isn’t supported yet</em></span></p>
+<p style="text-align: justify;">Buscando en la web, encontré que Spring 3.2.2.RELEASE no es compatible con Java 1.8, así que cambié la versión en el archivo pom.xml a Spring 3.2.9.RELEASE:</p>
+<pre class="brush: xml; gutter: true; first-line: 1"><span style="color: #003366;"><em>&lt;org.springframework-version&gt;3.2.9.RELEASE&lt;/org.springframework-version&gt;</em></span></pre>
+<p style="text-align: justify;">Esto soluciona el problema.</p>
+<p style="text-align: justify;"><em><strong>Nota:</strong></em> al hacer algún cambio en los archivos XML, deberemos detener el servidor, usar la opción clean, y luego lo volvemos a iniciar.</p>
+<p><strong>Resultado final de la vista home</strong></p>
+<p style="text-align: justify;">Es un formulario de inicio de sesión:</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5573" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2.jpg" alt="" width="1224" height="450" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2.jpg 1224w, https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2-300x110.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2-620x228.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2-768x282.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2-940x346.jpg 940w" sizes="(max-width: 1224px) 100vw, 1224px"><noscript><img class="alignnone size-full wp-image-5573" src="https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2.jpg" alt="" width="1224" height="450" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2.jpg 1224w, https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2-300x110.jpg 300w, https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2-620x228.jpg 620w, https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2-768x282.jpg 768w, https://www.elconspirador.com/wp-content/uploads/2018/04/21-sb-admin-view2-940x346.jpg 940w" sizes="(max-width: 1224px) 100vw, 1224px" /></noscript></p>
+<p><strong>Realizando una consulta en la base de datos</strong></p>
+<p style="text-align: justify;">En el formulario de inicio observamos que las variables del formulario son enviadas utilizando el método Post a la página “login”, entonces, en el archivo HomeController.java agregamos la siguiente función:</p>
+<pre class="brush: java; gutter: true; first-line: 1"><span style="color: #003366;"><em>@RequestMapping(value = "login", method = RequestMethod.POST)</em></span>
+<span style="color: #003366;"><em>public String login(Locale locale, Model model, HttpServletRequest request, @Valid @ModelAttribute("usuario") Usuario usuario, BindingResult bindingResult, HttpServletResponse response) {</em></span>
+
+<span style="color: #003366;"><em>model.addAttribute("error", 0);</em></span>
+<span style="color: #003366;"><em>if (bindingResult.hasErrors()) {</em></span>
+<span style="color: #003366;"><em>model.addAttribute("error", 1);</em></span>
+<span style="color: #003366;"><em>}else {</em></span>
+<span style="color: #003366;"><em>Usuario login = model_usuario.login(usuario.getCorreo(), tools.sha256(usuario.getPassword()));</em></span>
+<span style="color: #003366;"><em>if(login!=null) {</em></span>
+<span style="color: #003366;"><em>String token = "Nuestra propia implementación de tokens";</em></span>
+<span style="color: #003366;"><em>request.getSession().setAttribute("token", token);</em></span>
+<span style="color: #003366;"><em>try {</em></span>
+<span style="color: #003366;"><em>response.sendRedirect("login_correcto");</em></span>
+<span style="color: #003366;"><em>}catch(Exception e) {</em></span>
+<span style="color: #003366;"><em>model.addAttribute("error", 3);</em></span>
+<span style="color: #003366;"><em>}</em></span>
+<span style="color: #003366;"><em>}else {</em></span>
+<span style="color: #003366;"><em>model.addAttribute("error", 2);</em></span>
+<span style="color: #003366;"><em>}</em></span>
+<span style="color: #003366;"><em>}</em></span>
+
+<span style="color: #003366;"><em>return "home";</em></span>
+<span style="color: #003366;"><em>}</em></span></pre>
+<p style="text-align: justify;">Básicamente esta función, recibe las variables del formulario en la siguiente variable:<br>
+<em><span style="color: #003366;">@Valid @ModelAttribute(“usuario”) Usuario usuario</span></em><br>
+La anotación @Valid indica que los valores deben de cumplir con las validaciones que establecimos en Usuario.java, los resultados de dicha validación se pasan a:<br>
+<em><span style="color: #003366;">BindingResult bindingResult</span></em></p>
+<p style="text-align: justify;">Por tal motivo, utilizamos el if para verificar que no tenga errores (o alguna inyección de código), de esta manera, podemos validar su usuario y contraseña para poder iniciar sesión y establecer el token.</p>
+<p style="text-align: justify;">Las importaciones extras que necesita HomeController son las siguientes:</p>
+<pre class="brush: java; gutter: true; first-line: 1"><span style="color: #003366;"><em>import org.springframework.beans.factory.annotation.Autowired;</em></span>
+<span style="color: #003366;"><em>import javax.servlet.http.HttpServletRequest;</em></span>
+<span style="color: #003366;"><em>import javax.servlet.http.HttpServletResponse;</em></span>
+<span style="color: #003366;"><em>import javax.validation.Valid;</em></span>
+<span style="color: #003366;"><em>import org.springframework.web.bind.annotation.ModelAttribute;</em></span>
+<span style="color: #003366;"><em>import org.springframework.validation.BindingResult;</em></span>
+<span style="color: #003366;"><em>import com.elconspirador.ejemplo.dao.UsuarioDao;</em></span>
+<span style="color: #003366;"><em>import com.elconspirador.ejemplo.entity.Usuario;</em></span>
+<span style="color: #003366;"><em>import com.elconspirador.ejemplo.library.Tools;</em></span></pre>
+<p style="text-align: justify;">Las definiciones de variables globales de la clase son las siguientes:</p>
+<pre class="brush: java; gutter: true; first-line: 1"><span style="color: #003366;"><em>@Autowired
+UsuarioDao model_usuario;
+Tools tools = new Tools();</em></span></pre>
+<p style="text-align: justify;">Tambien observamos la clase Tools, de acuerdo a la implementación de cada uno, agregaremos las funciones utilizadas en distintas partes de la aplicación.</p>
+<p><strong>Tools.java</strong></p>
+<pre class="brush: java; gutter: true; first-line: 1"><span style="color: #003366;"><em>package com.elconspirador.ejemplo.library;</em></span>
+
+<span style="color: #003366;"><em>import java.security.MessageDigest;</em></span>
+<span style="color: #003366;"><em>public class Tools {</em></span>
+
+<span style="color: #003366;"><em>public static String sha256(String base) {</em></span>
+<span style="color: #003366;"><em>try{</em></span>
+<span style="color: #003366;"><em>MessageDigest digest = MessageDigest.getInstance("SHA-256");</em></span>
+<span style="color: #003366;"><em>byte[] hash = digest.digest(base.getBytes("UTF-8"));</em></span>
+<span style="color: #003366;"><em>StringBuffer hexString = new StringBuffer();</em></span>
+
+<span style="color: #003366;"><em>for (int i = 0; i &lt; hash.length; i++) {</em></span>
+<span style="color: #003366;"><em>String hex = Integer.toHexString(0xff &amp; hash[i]);</em></span>
+<span style="color: #003366;"><em>if(hex.length() == 1) hexString.append('0');</em></span>
+<span style="color: #003366;"><em>hexString.append(hex);</em></span>
+<span style="color: #003366;"><em>}</em></span>
+
+<span style="color: #003366;"><em>return hexString.toString();</em></span>
+<span style="color: #003366;"><em>} catch(Exception ex){</em></span>
+<span style="color: #003366;"><em>throw new RuntimeException(ex);</em></span>
+<span style="color: #003366;"><em>}</em></span>
+<span style="color: #003366;"><em>}</em></span>
+
+<span style="color: #003366;"><em>}</em></span></pre>
+<p><strong>HomeController.java final</strong></p>
+<p style="text-align: justify;">Para finalizar, la clase HomeController.java completa es la siguiente:</p>
+<pre class="brush: java; gutter: true; first-line: 1"><em><span style="color: #003366;">package com.elconspirador.ejemplo.controller;</span></em>
+
+<em><span style="color: #003366;">import java.util.Locale;</span></em>
+
+<em><span style="color: #003366;">import org.springframework.stereotype.Controller;</span></em>
+<em><span style="color: #003366;">import org.springframework.ui.Model;</span></em>
+
+<em><span style="color: #003366;">import org.springframework.web.bind.annotation.RequestMapping;</span></em>
+<em><span style="color: #003366;">import org.springframework.web.bind.annotation.RequestMethod;</span></em>
+
+<em><span style="color: #003366;">import com.elconspirador.ejemplo.entity.Usuario;</span></em>
+
+
+<em><span style="color: #003366;">import org.springframework.beans.factory.annotation.Autowired;</span></em>
+<em><span style="color: #003366;">import javax.servlet.http.HttpServletRequest;</span></em>
+<em><span style="color: #003366;">import javax.servlet.http.HttpServletResponse;</span></em>
+<em><span style="color: #003366;">import javax.validation.Valid;</span></em>
+<em><span style="color: #003366;">import org.springframework.web.bind.annotation.ModelAttribute;</span></em>
+<em><span style="color: #003366;">import org.springframework.validation.BindingResult;</span></em>
+<em><span style="color: #003366;">import com.elconspirador.ejemplo.dao.UsuarioDao;</span></em>
+<em><span style="color: #003366;">import com.elconspirador.ejemplo.entity.Usuario;</span></em>
+<em><span style="color: #003366;">import com.elconspirador.ejemplo.library.Tools;</span></em>
+
+<em><span style="color: #003366;">/**</span></em>
+<em><span style="color: #003366;">* Handles requests for the application home page.</span></em>
+<em><span style="color: #003366;">*/</span></em>
+<em><span style="color: #003366;">@Controller</span></em>
+<em><span style="color: #003366;">public class HomeController {</span></em>
+
+<em><span style="color: #003366;">@Autowired</span></em>
+<em><span style="color: #003366;">UsuarioDao model_usuario;</span></em>
+<em><span style="color: #003366;">Tools tools = new Tools();</span></em>
+
+<em><span style="color: #003366;">/**</span></em>
+<em><span style="color: #003366;">* Simply selects the home view to render by returning its name.</span></em>
+<em><span style="color: #003366;">*/</span></em>
+<em><span style="color: #003366;">@RequestMapping(value = "/", method = RequestMethod.GET)</span></em>
+<em><span style="color: #003366;">public String home(Locale locale, Model model, Usuario usuario) {</span></em>
+<em><span style="color: #003366;">model.addAttribute("error", 0);</span></em>
+<em><span style="color: #003366;">model.addAttribute("usuario", usuario);</span></em>
+
+<em><span style="color: #003366;">return "home";</span></em>
+<em><span style="color: #003366;">}</span></em>
+
+<em><span style="color: #003366;">@RequestMapping(value = "login", method = RequestMethod.POST)</span></em>
+<em><span style="color: #003366;">public String login(Locale locale, Model model, HttpServletRequest request, @Valid @ModelAttribute("usuario") Usuario usuario, BindingResult bindingResult, HttpServletResponse response) {</span></em>
+
+<em><span style="color: #003366;">model.addAttribute("error", 0);</span></em>
+<em><span style="color: #003366;">if (bindingResult.hasErrors()) {</span></em>
+<em><span style="color: #003366;">model.addAttribute("error", 1);</span></em>
+<em><span style="color: #003366;">}else {</span></em>
+<em><span style="color: #003366;">Usuario login = model_usuario.login(usuario.getCorreo(), tools.sha256(usuario.getPassword()));</span></em>
+<em><span style="color: #003366;">if(login!=null) {</span></em>
+<em><span style="color: #003366;">String token = "Nuestra propia implementación de tokens";</span></em>
+<em><span style="color: #003366;">request.getSession().setAttribute("token", token);</span></em>
+<em><span style="color: #003366;">try {</span></em>
+<em><span style="color: #003366;">response.sendRedirect("login_correcto");</span></em>
+<em><span style="color: #003366;">}catch(Exception e) {</span></em>
+<em><span style="color: #003366;">model.addAttribute("error", 3);</span></em>
+<em><span style="color: #003366;">}</span></em>
+<em><span style="color: #003366;">}else {</span></em>
+<em><span style="color: #003366;">model.addAttribute("error", 2);</span></em>
+<em><span style="color: #003366;">}</span></em>
+<em><span style="color: #003366;">}</span></em>
+
+<em><span style="color: #003366;">return "home";</span></em>
+<em><span style="color: #003366;">}</span></em>
+
+<em><span style="color: #003366;">}</span></em></pre>
+<p><strong>Validación en acción</strong></p>
+<p style="text-align: justify;">Esto sucede al enviar el formulario con los campos vacios:</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5574" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/22-validacion-en-accion.jpg" alt="" width="472" height="477" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/22-validacion-en-accion.jpg 472w, https://www.elconspirador.com/wp-content/uploads/2018/04/22-validacion-en-accion-300x303.jpg 300w" sizes="(max-width: 472px) 100vw, 472px"><noscript><img class="alignnone size-full wp-image-5574" src="https://www.elconspirador.com/wp-content/uploads/2018/04/22-validacion-en-accion.jpg" alt="" width="472" height="477" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/22-validacion-en-accion.jpg 472w, https://www.elconspirador.com/wp-content/uploads/2018/04/22-validacion-en-accion-300x303.jpg 300w" sizes="(max-width: 472px) 100vw, 472px" /></noscript></p>
+<p><strong>Datos incorrectos</strong></p>
+<p style="text-align: justify;">Al enviar datos incorrectos, muestra un mensaje de error (valida la información en la base de datos correctamente):</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5575" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/23-datos-incorrectos.jpg" alt="" width="442" height="349" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/23-datos-incorrectos.jpg 442w, https://www.elconspirador.com/wp-content/uploads/2018/04/23-datos-incorrectos-300x237.jpg 300w" sizes="(max-width: 442px) 100vw, 442px"><noscript><img class="alignnone size-full wp-image-5575" src="https://www.elconspirador.com/wp-content/uploads/2018/04/23-datos-incorrectos.jpg" alt="" width="442" height="349" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/23-datos-incorrectos.jpg 442w, https://www.elconspirador.com/wp-content/uploads/2018/04/23-datos-incorrectos-300x237.jpg 300w" sizes="(max-width: 442px) 100vw, 442px" /></noscript></p>
+<p><strong>Login correcto</strong></p>
+<p style="text-align: justify;">Al ingresar los datos correctos, nos redireccionará a la página login_correcto.</p>
+<p><img class="lazy-hidden alignnone size-full wp-image-5576" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lazy_placeholder.gif" data-lazy-type="image" data-src="https://www.elconspirador.com/wp-content/uploads/2018/04/24-login-correcto.jpg" alt="" width="561" height="281" srcset="" data-srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/24-login-correcto.jpg 561w, https://www.elconspirador.com/wp-content/uploads/2018/04/24-login-correcto-300x150.jpg 300w" sizes="(max-width: 561px) 100vw, 561px"><noscript><img class="alignnone size-full wp-image-5576" src="https://www.elconspirador.com/wp-content/uploads/2018/04/24-login-correcto.jpg" alt="" width="561" height="281" srcset="https://www.elconspirador.com/wp-content/uploads/2018/04/24-login-correcto.jpg 561w, https://www.elconspirador.com/wp-content/uploads/2018/04/24-login-correcto-300x150.jpg 300w" sizes="(max-width: 561px) 100vw, 561px" /></noscript></p>
+<p style="text-align: justify;">Listo! ahora puedes realizar proyectos con Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP y algunas otras tecnologías.</p>
+<div id="wp-ulike-post-5549" class="wpulike wpulike-default"> <div class="wp_ulike_general_class wp_ulike_is_unliked"> <a data-ulike-id="5549" data-ulike-nonce="c54953264d" data-ulike-type="likeThis" data-ulike-status="3" class="wp_ulike_btn wp_ulike_put_image"> </a> <span class="count-box">2+</span> </div> </div><!-- AddThis Advanced Settings above via filter on the_content --><!-- AddThis Advanced Settings below via filter on the_content --><!-- AddThis Advanced Settings generic via filter on the_content --><!-- AddThis Share Buttons above via filter on the_content --><!-- AddThis Share Buttons below via filter on the_content --><div class="at-below-post addthis_tool" data-url="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/"></div><!-- AddThis Share Buttons generic via filter on the_content --><div class="yarpp-related">
+<b>Publicaciones similares</b><ol>
+<li><a href="https://www.elconspirador.com/2014/05/21/implementacion-de-api-con-spring-mvc-utilizando-rest-en-eclipse/" rel="bookmark" title="Implementación de API con Spring MVC utilizando REST en Eclipse">Implementación de API con Spring MVC utilizando REST en Eclipse </a><p style="text-align: justify;"><small>Visitas: 637Tiempo total: 15 días con 23:46:18 hrsA continuación describiré lo necesario para poder implementar una API que permita el envió de información entre dispositivos externos y nuestra aplicación web utilizando el formato de intercambio de datos JSON. El principal...</small></p></li>
+<li><a href="https://www.elconspirador.com/2014/05/31/como-funciona-spring-mvc-io-parte-2-controlador/" rel="bookmark" title="Como funciona Spring MVC IO – Parte 2 – Controlador">Como funciona Spring MVC IO – Parte 2 – Controlador </a><p style="text-align: justify;"><small>Visitas: 880Tiempo total: 14 días con 16:52:29 hrsEl controlador es el que se encarga de darle vida a cada vista enviándole la información que necesita, otra de sus funcionalidades es la de solicitar la información a la base de datos...</small></p></li>
+<li><a href="https://www.elconspirador.com/2014/04/16/jboss-en-servidor-externo-rhel-7-y-eclipse-kepler-con-spring-mvc/" rel="bookmark" title="JBoss en servidor externo RHEL 7 y Eclipse Kepler con Spring MVC">JBoss en servidor externo RHEL 7 y Eclipse Kepler con Spring MVC </a><p style="text-align: justify;"><small>Visitas: 139Tiempo total: 0 días con 8:25:40 hrsPara iniciar, el software de virtualización es VirtualBox 4.2.12 R849080 con un disco dinámico de un máximo de 20GB, una memoria RAM de 1GB y, se configuraron tres adaptadores de red en VirtualBox,...</small></p></li>
+<li><a href="https://www.elconspirador.com/2014/04/08/agregar-nueva-dependencia-en-eclipse-maven/" rel="bookmark" title="Agregar nueva dependencia en Eclipse – Maven">Agregar nueva dependencia en Eclipse – Maven </a><p style="text-align: justify;"><small>Visitas: 11163Tiempo total: 484 días con 3:34:27 hrsA veces es necesario contar con un controlador (por ejemplo) JDBC de cualquier Base de Datos, algunos de estos controladores o cualquier otra dependencia únicamente la podemos descargar de la web en formatos...</small></p></li>
+<li><a href="https://www.elconspirador.com/2014/04/13/conexion-eclipse-con-sql-server-utilizando-el-driver-sqljdbc-como-modulo-en-jboss/" rel="bookmark" title="Conexión Eclipse con SQL Server utilizando el Driver SQLJDBC como modulo en JBoss">Conexión Eclipse con SQL Server utilizando el Driver SQLJDBC como modulo en JBoss </a><p style="text-align: justify;"><small>Visitas: 3042Tiempo total: 60 días con 16:20:8 hrsEsta publicación explica la forma correcta de lograr la conexión hacia el servidor SQL Server, usando el driver sqljdbc4-2.0.jar instalado como modulo en JBoss y lograr su consumo desde Eclipse, logrando crear una...</small></p></li>
+<li><a href="https://www.elconspirador.com/2014/05/28/como-funciona-spring-mvc-io-parte-1-vista/" rel="bookmark" title="Como funciona Spring MVC IO – Parte 1 – Vista">Como funciona Spring MVC IO – Parte 1 – Vista </a><p style="text-align: justify;"><small>Visitas: 445Tiempo total: 8 días con 11:38:23 hrsSpring MVC es un framework JAVA que facilita el desarrollo de aplicaciones WEB ofreciendo las clases necesarias para gestionar los formularios web, carga de archivos, manejo de variables y permite la gestión de...</small></p></li>
+<li><a href="https://www.elconspirador.com/2014/06/10/como-funciona-spring-mvc-io-parte-3-modelo/" rel="bookmark" title="Como funciona Spring MVC IO – Parte 3 – Modelo">Como funciona Spring MVC IO – Parte 3 – Modelo </a><p style="text-align: justify;"><small>Visitas: 154Tiempo total: 4 días con 2:45:47 hrsEl modelo en un framework MVC es el que se encarga de establecer la conexión a la base de datos y contiene los métodos y funciones que el desarrollador ha definido y que...</small></p></li>
+<li><a href="https://www.elconspirador.com/2015/08/10/parte-1-introduccion-a-eclipse-con-android-como-programar-una-aplicacion/" rel="bookmark" title="[Parte 1] Introducción a Eclipse con Android – Como programar una aplicación">[Parte 1] Introducción a Eclipse con Android – Como programar una aplicación </a><p style="text-align: justify;"><small>Visitas: 2208Tiempo total: 45 días con 4:54:56 hrsA continuación las instrucciones necesarias para entender cómo es que funciona Android en Eclipse, todo lo necesario para empezar a manipular las clases Java, modificar el diseño de los XML (que son las...</small></p></li>
+<li><a href="https://www.elconspirador.com/2013/09/06/glassfish-server-netbeans-installation/" rel="bookmark" title="GlassFish server and Netbeans installation">GlassFish server and Netbeans installation </a><p style="text-align: justify;"><small>Visitas: 36850Tiempo total: 721 días con 3:24:19 hrsThis is a graphic tutorial with a description step by step about how to run jsp&nbsp;files with the GlassFish server and Netbeans. 1. Download the JDK (Java Se Development Kit 0...</small></p></li>
+</ol>
+</div>
+        </div>
+                
+        <div class="bubble-line"><div class="left-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0,29.4c0,0,7.5,0,7.5-7c0,0,7,0,7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7-7-7-7-7c0-7-7.5-7-7.5-7"></path>
+                        </svg>
+                </div><div class="right-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M15,29.4c0,0-7.5,0-7.5-7c0,0-7,0-7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7,7-7,7-7c0-7,7.5-7,7.5-7"></path>
+                        </svg>
+                </div></div>
+        <div class="post-footer">
+            <div class="row">
+				                                    <div class="col-sm-12 s-tags">
+                        								<a href="https://www.elconspirador.com/tag/jar/" rel="tag">.jar</a> <a href="https://www.elconspirador.com/tag/modelattribute/" rel="tag">@ModelAttribute</a> <a href="https://www.elconspirador.com/tag/valid/" rel="tag">@Valid</a> <a href="https://www.elconspirador.com/tag/add-library/" rel="tag">Add Library</a> <a href="https://www.elconspirador.com/tag/aka-spring-ide-and-spring-tool-suite/" rel="tag">aka Spring IDE and Spring Tool suite</a> <a href="https://www.elconspirador.com/tag/apache/" rel="tag">Apache</a> <a href="https://www.elconspirador.com/tag/appservlet/" rel="tag">appServlet</a> <a href="https://www.elconspirador.com/tag/archivo-jsp/" rel="tag">archivo JSP</a> <a href="https://www.elconspirador.com/tag/base-de-datos/" rel="tag">base de datos</a> <a href="https://www.elconspirador.com/tag/body/" rel="tag">body</a> <a href="https://www.elconspirador.com/tag/bootstrap/" rel="tag">Bootstrap</a> <a href="https://www.elconspirador.com/tag/clean/" rel="tag">clean</a> <a href="https://www.elconspirador.com/tag/codigo/" rel="tag">código</a> <a href="https://www.elconspirador.com/tag/coeficiente-intelectual/" rel="tag">coeficiente intelectual</a> <a href="https://www.elconspirador.com/tag/controller/" rel="tag">Controller</a> <a href="https://www.elconspirador.com/tag/correo-electronico/" rel="tag">correo electrónico</a> <a href="https://www.elconspirador.com/tag/css/" rel="tag">css</a> <a href="https://www.elconspirador.com/tag/dao/" rel="tag">DAO</a> <a href="https://www.elconspirador.com/tag/datos/" rel="tag">datos</a> <a href="https://www.elconspirador.com/tag/datos-incorrectos/" rel="tag">Datos incorrectos</a> <a href="https://www.elconspirador.com/tag/db/" rel="tag">DB</a> <a href="https://www.elconspirador.com/tag/download-and-install/" rel="tag">Download and install</a> <a href="https://www.elconspirador.com/tag/eclipse/" rel="tag">Eclipse</a> <a href="https://www.elconspirador.com/tag/eclipse-ide/" rel="tag">Eclipse IDE</a> <a href="https://www.elconspirador.com/tag/eclipse-ide-for-java-ee-developers/" rel="tag">Eclipse IDE for Java EE Developers</a> <a href="https://www.elconspirador.com/tag/eclipse-marketplace/" rel="tag">Eclipse MarketPlace</a> <a href="https://www.elconspirador.com/tag/eclipse-oxigen/" rel="tag">Eclipse Oxigen</a> <a href="https://www.elconspirador.com/tag/eclipse-inst-win64-exe/" rel="tag">eclipse-inst-win64.exe</a> <a href="https://www.elconspirador.com/tag/entity/" rel="tag">entity</a> <a href="https://www.elconspirador.com/tag/expresiones-regulares/" rel="tag">expresiones regulares</a> <a href="https://www.elconspirador.com/tag/external-mysql-server/" rel="tag">External MySQL server</a> <a href="https://www.elconspirador.com/tag/footer/" rel="tag">footer</a> <a href="https://www.elconspirador.com/tag/form/" rel="tag">form</a> <a href="https://www.elconspirador.com/tag/formulario/" rel="tag">formulario</a> <a href="https://www.elconspirador.com/tag/framework-spring-mvc/" rel="tag">framework Spring MVC</a> <a href="https://www.elconspirador.com/tag/generate/" rel="tag">Generate</a> <a href="https://www.elconspirador.com/tag/getters/" rel="tag">getters</a> <a href="https://www.elconspirador.com/tag/header/" rel="tag">header</a> <a href="https://www.elconspirador.com/tag/heidisql/" rel="tag">HeidiSQL</a> <a href="https://www.elconspirador.com/tag/html/" rel="tag">html</a> <a href="https://www.elconspirador.com/tag/iniciar-sesion/" rel="tag">iniciar sesión</a> <a href="https://www.elconspirador.com/tag/inyeccion-de-codigo/" rel="tag">inyección de código</a> <a href="https://www.elconspirador.com/tag/java/" rel="tag">Java</a> <a href="https://www.elconspirador.com/tag/java-compiler/" rel="tag">Java compiler</a> <a href="https://www.elconspirador.com/tag/javascript/" rel="tag">Javascript</a> <a href="https://www.elconspirador.com/tag/javax-validation/" rel="tag">Javax.validation</a> <a href="https://www.elconspirador.com/tag/jdbctemplate/" rel="tag">JdbcTemplate</a> <a href="https://www.elconspirador.com/tag/jre/" rel="tag">JRE</a> <a href="https://www.elconspirador.com/tag/jre-system-library/" rel="tag">JRE System Library</a> <a href="https://www.elconspirador.com/tag/jre-8u161-windows-x64-exe/" rel="tag">jre-8u161-windows-x64.exe</a> <a href="https://www.elconspirador.com/tag/jre-1-8-0_161/" rel="tag">jre.1.8.0_161</a> <a href="https://www.elconspirador.com/tag/js/" rel="tag">JS</a> <a href="https://www.elconspirador.com/tag/jsp/" rel="tag">JSP</a> <a href="https://www.elconspirador.com/tag/layout-jsp/" rel="tag">Layout.jsp</a> <a href="https://www.elconspirador.com/tag/login-correcto/" rel="tag">Login correcto</a> <a href="https://www.elconspirador.com/tag/main/" rel="tag">main</a> <a href="https://www.elconspirador.com/tag/maquina-virtual/" rel="tag">maquina virtual</a> <a href="https://www.elconspirador.com/tag/maven/" rel="tag">Maven</a> <a href="https://www.elconspirador.com/tag/meta-inf/" rel="tag">META-INF</a> <a href="https://www.elconspirador.com/tag/mysql/" rel="tag">Mysql</a> <a href="https://www.elconspirador.com/tag/mysql-server/" rel="tag">MySQL server</a> <a href="https://www.elconspirador.com/tag/objeto-de-acceso-a-los-datos/" rel="tag">Objeto de acceso a los datos</a> <a href="https://www.elconspirador.com/tag/pagecontext-request-contextpath/" rel="tag">pageContext.request.contextPath</a> <a href="https://www.elconspirador.com/tag/pagina/" rel="tag">página</a> <a href="https://www.elconspirador.com/tag/plantilla-jdbctemplate/" rel="tag">plantilla JdbcTemplate</a> <a href="https://www.elconspirador.com/tag/plantillas-html/" rel="tag">plantillas HTML</a> <a href="https://www.elconspirador.com/tag/pom-xml/" rel="tag">pom.xml</a> <a href="https://www.elconspirador.com/tag/processing-xml/" rel="tag">processing XML</a> <a href="https://www.elconspirador.com/tag/project-explorer/" rel="tag">Project explorer</a> <a href="https://www.elconspirador.com/tag/project-facets/" rel="tag">Project facets</a> <a href="https://www.elconspirador.com/tag/repository/" rel="tag">repository</a> <a href="https://www.elconspirador.com/tag/root-context/" rel="tag">root-context</a> <a href="https://www.elconspirador.com/tag/sb-admin2/" rel="tag">Sb-admin2</a> <a href="https://www.elconspirador.com/tag/schema-mappings/" rel="tag">schema mappings</a> <a href="https://www.elconspirador.com/tag/servidor-ubuntu/" rel="tag">servidor Ubuntu</a> <a href="https://www.elconspirador.com/tag/servlet-context/" rel="tag">servlet-context</a> <a href="https://www.elconspirador.com/tag/servlet-context-xml/" rel="tag">Servlet-context.xml</a> <a href="https://www.elconspirador.com/tag/setters/" rel="tag">setters</a> <a href="https://www.elconspirador.com/tag/source/" rel="tag">Source</a> <a href="https://www.elconspirador.com/tag/spring/" rel="tag">spring</a> <a href="https://www.elconspirador.com/tag/spring-legacy-project/" rel="tag">Spring Legacy Project</a> <a href="https://www.elconspirador.com/tag/spring-mvc/" rel="tag">Spring MVC</a> <a href="https://www.elconspirador.com/tag/spring-mvc-project/" rel="tag">Spring MVC Project</a> <a href="https://www.elconspirador.com/tag/spring-source-tool-suite/" rel="tag">Spring Source Tool Suite</a> <a href="https://www.elconspirador.com/tag/spring-sts/" rel="tag">Spring STS</a> <a href="https://www.elconspirador.com/tag/spring-tool/" rel="tag">Spring Tool</a> <a href="https://www.elconspirador.com/tag/spring-web/" rel="tag">spring-web</a> <a href="https://www.elconspirador.com/tag/spring-webmvc/" rel="tag">Spring-webmvc</a> <a href="https://www.elconspirador.com/tag/spring-schemas/" rel="tag">spring.schemas</a> <a href="https://www.elconspirador.com/tag/src/" rel="tag">src</a> <a href="https://www.elconspirador.com/tag/sts/" rel="tag">STS</a> <a href="https://www.elconspirador.com/tag/tag/" rel="tag">tag</a> <a href="https://www.elconspirador.com/tag/tag-c/" rel="tag">tag c</a> <a href="https://www.elconspirador.com/tag/tecnologias/" rel="tag">tecnologías</a> <a href="https://www.elconspirador.com/tag/test/" rel="tag">test</a> <a href="https://www.elconspirador.com/tag/tiles/" rel="tag">Tiles</a> <a href="https://www.elconspirador.com/tag/tiles-xml/" rel="tag">tiles.xml</a> <a href="https://www.elconspirador.com/tag/token/" rel="tag">token</a> <a href="https://www.elconspirador.com/tag/tomcat/" rel="tag">Tomcat</a> <a href="https://www.elconspirador.com/tag/update-project/" rel="tag">Update Project</a> <a href="https://www.elconspirador.com/tag/url/" rel="tag">URL</a> <a href="https://www.elconspirador.com/tag/validacion/" rel="tag">validación</a> <a href="https://www.elconspirador.com/tag/variables-globales/" rel="tag">variables globales</a> <a href="https://www.elconspirador.com/tag/vista/" rel="tag">Vista</a> <a href="https://www.elconspirador.com/tag/web-inf/" rel="tag">WEB-INF</a> <a href="https://www.elconspirador.com/tag/webapp/" rel="tag">webapp</a> <a href="https://www.elconspirador.com/tag/workspace/" rel="tag">Workspace</a> <a href="https://www.elconspirador.com/tag/xml/" rel="tag">XML</a>                                            </div>
+                            </div>
+        </div>
+        <!-- /.post-footer -->
+    </div>
+    <!-- /.entry-content -->
+            
+</article>
+
+
+
+
+
+
+
+<article class="content-item">
+    	<div id="respond" class="comment-respond">
+		<div class="post-title"><h3> Deja un comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/#respond" style="display:none;">Cancelar respuesta</a></small></h3></div><div class="bubble-line"><div class="left-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0,29.4c0,0,7.5,0,7.5-7c0,0,7,0,7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7-7-7-7-7c0-7-7.5-7-7.5-7"></path>
+                        </svg>
+                </div><div class="right-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M15,29.4c0,0-7.5,0-7.5-7c0,0-7,0-7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7,7-7,7-7c0-7,7.5-7,7.5-7"></path>
+                        </svg>
+                </div></div> 			<form action="https://www.elconspirador.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				Tu correo no será publicado. Los campos obligatorios son los que tienen el símbolo *<p class="comment-form-author"><label for="author">Nombre:  <span class="required" style="color:#085991;">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required="true" required="required"></p>
+<p class="comment-form-email"><label for="email">Correo:  <span class="required" style="color:#085991;">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" required="required"></p>
+<p class="comment-form-url"><label for="url">Página web: </label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-comment"><label for="comment">Comentario: </label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p>
+        <!-- CRFP Fields: Start -->
+        <p class="crfp-field">
+                        <span class="star-rating-control"><div class="rating-cancel"><a title="Cancel">0</a></div><div role="text" aria-label="" class="star-rating rater-0 star star-rating-applied star-rating-live"><a title="1">1</a></div><div role="text" aria-label="" class="star-rating rater-0 star star-rating-applied star-rating-live"><a title="2">2</a></div><div role="text" aria-label="" class="star-rating rater-0 star star-rating-applied star-rating-live"><a title="3">3</a></div><div role="text" aria-label="" class="star-rating rater-0 star star-rating-applied star-rating-live"><a title="4">4</a></div><div role="text" aria-label="" class="star-rating rater-0 star star-rating-applied star-rating-live"><a title="5">5</a></div></span><input name="rating-star" type="radio" class="star star-rating-applied" value="1" style="display: none;">
+            <input name="rating-star" type="radio" class="star star-rating-applied" value="2" style="display: none;">
+            <input name="rating-star" type="radio" class="star star-rating-applied" value="3" style="display: none;">
+            <input name="rating-star" type="radio" class="star star-rating-applied" value="4" style="display: none;">
+            <input name="rating-star" type="radio" class="star star-rating-applied" value="5" style="display: none;">
+            <input type="hidden" name="crfp-rating" value="0">
+        </p>
+        <!-- CRFP Fields: End -->
+        <p class="form-submit"><input name="submit" type="submit" id="submit" class="button" value="Enviar comentario"> <input type="hidden" name="comment_post_ID" value="5549" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>	<script type="text/javascript">
+	<!--
+	refJS = escape( document[ 'referrer' ] );
+	document.write("<input type='hidden' name='refJS' value='"+refJS+"'>");
+	// -->
+	</script><input type="hidden" name="refJS" value="https%3A//www.google.com/">
+				</form>
+			</div><!-- #respond -->
+	</article>
+              
+            </div>
+
+            <!-- Sidebar
+================================================== -->
+
+<div class="col-sm-4 sidebar">
+
+	        			<div id="search-2" class="widget widget_search"><h3 class="widget-title">Buscar</h3> <div class="bubble-line"><div class="left-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0,29.4c0,0,7.5,0,7.5-7c0,0,7,0,7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7-7-7-7-7c0-7-7.5-7-7.5-7"></path>
+                        </svg>
+                </div><div class="right-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M15,29.4c0,0-7.5,0-7.5-7c0,0-7,0-7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7,7-7,7-7c0-7,7.5-7,7.5-7"></path>
+                        </svg>
+                </div></div><form action="https://www.elconspirador.com/" class="search_form" method="get">
+                        <input type="text" placeholder="Search and hit enter..." required="" name="s" autocomplete="off">
+                        <button class="search_content_button" type="submit"><i class="fa fa-search"></i> </button>
+                    </form></div><div id="text-2" class="widget widget_text"><h3 class="widget-title">redacTor</h3> <div class="bubble-line"><div class="left-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0,29.4c0,0,7.5,0,7.5-7c0,0,7,0,7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7-7-7-7-7c0-7-7.5-7-7.5-7"></path>
+                        </svg>
+                </div><div class="right-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M15,29.4c0,0-7.5,0-7.5-7c0,0-7,0-7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7,7-7,7-7c0-7,7.5-7,7.5-7"></path>
+                        </svg>
+                </div></div>			<div class="textwidget"><div style="text-align: justify;">Hola mi nombre es Jose Pablo, Ingeniero en Ciencias y Sistemas de la Universidad de San Carlos de Guatemala. Acerca de mí y de este blog: exploro volcanes, me gusta la fotografía, el arte, la programación, la ingeniería y la abstracción de las ideas para desarrollarlas en este mundo real haciendo de mi experiencia una explicación.</div></div>
+		</div><div id="adwidget_htmlwidget-5" class="widget AdWidget_HTMLWidget"><div style="text-align: center;"><div id="sus_id">
+<img src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/mail-small-w.png">&nbsp;&nbsp;Click para suscribirse
+<a href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/#">&nbsp;</a>
+<div class="close">&nbsp;</div>
+</div></div></div><div id="addthis_tool_by_class_name_widget-0" class="widget widget_addthis_tool_by_class_name_widget"><!-- Widget added by an AddThis plugin --><!-- widget name: AddThis Tool --><h3 class="widget-title">Comparte</h3> <div class="bubble-line"><div class="left-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0,29.4c0,0,7.5,0,7.5-7c0,0,7,0,7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7-7-7-7-7c0-7-7.5-7-7.5-7"></path>
+                        </svg>
+                </div><div class="right-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M15,29.4c0,0-7.5,0-7.5-7c0,0-7,0-7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7,7-7,7-7c0-7,7.5-7,7.5-7"></path>
+                        </svg>
+                </div></div><div class="addthis_toolbox addthis_default_style addthis_32x32_style"><a class="addthis_button_tumblr addthis_button_preferred_1 at300b" target="_blank" title="Tumblr" href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/#"><span class="at-icon-wrapper" style="background-color: rgb(55, 69, 92); line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-tumblr-2" title="Tumblr" alt="Tumblr" style="width: 32px; height: 32px;" class="at-icon at-icon-tumblr"><title id="at-svg-tumblr-2">Tumblr</title><g><path d="M19.59 22.176c-.392.186-1.14.348-1.695.362-1.682.045-2.008-1.18-2.022-2.07V13.93h4.218v-3.18H15.89V5.403h-3.076c-.05 0-.138.044-.15.157-.18 1.636-.947 4.51-4.133 5.66v2.71h2.124v6.862c0 2.35 1.733 5.688 6.308 5.61 1.544-.028 3.258-.674 3.637-1.23l-1.01-2.996" fill-rule="evenodd"></path></g></svg></span></a><a class="addthis_button_google addthis_button_preferred_2 at300b" target="_blank" title="Google Bookmark" href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/#"><span class="at-icon-wrapper" style="background-color: rgb(66, 133, 244); line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-google-3" title="Google Bookmark" alt="Google Bookmark" style="width: 32px; height: 32px;" class="at-icon at-icon-google"><title id="at-svg-google-3">Google Bookmark</title><g><path d="M16.213 13.998H26.72c.157.693.28 1.342.28 2.255C27 22.533 22.7 27 16.224 27 10.03 27 5 22.072 5 16S10.03 5 16.224 5c3.03 0 5.568 1.09 7.51 2.87l-3.188 3.037c-.808-.748-2.223-1.628-4.322-1.628-3.715 0-6.745 3.024-6.745 6.73 0 3.708 3.03 6.733 6.744 6.733 4.3 0 5.882-2.915 6.174-4.642h-6.185V14z" fill-rule="evenodd"></path></g></svg></span></a><a class="addthis_button_facebook addthis_button_preferred_3 at300b" title="Facebook" href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/#"><span class="at-icon-wrapper" style="background-color: rgb(59, 89, 152); line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-facebook-4" title="Facebook" alt="Facebook" style="width: 32px; height: 32px;" class="at-icon at-icon-facebook"><title id="at-svg-facebook-4">Facebook</title><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></span></a><a class="addthis_button_twitter addthis_button_preferred_4 at300b" title="Twitter" href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/#"><span class="at-icon-wrapper" style="background-color: rgb(29, 161, 242); line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-twitter-5" title="Twitter" alt="Twitter" style="width: 32px; height: 32px;" class="at-icon at-icon-twitter"><title id="at-svg-twitter-5">Twitter</title><g><path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336" fill-rule="evenodd"></path></g></svg></span></a><a class="addthis_button_compact at300m" href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/#"><span class="at-icon-wrapper" style="background-color: rgb(255, 101, 80); line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-addthis-1" title="More" alt="More" style="width: 32px; height: 32px;" class="at-icon at-icon-addthis"><title id="at-svg-addthis-1">AddThis</title><g><path d="M18 14V8h-4v6H8v4h6v6h4v-6h6v-4h-6z" fill-rule="evenodd"></path></g></svg></span></a><a class="addthis_counter addthis_bubble_style" href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/#" style="display: inline-block;"><a class="addthis_button_expanded" target="_blank" title="More" href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/#">0</a><a class="atc_s addthis_button_compact">Share<span></span></a></a><div class="atclear"></div></div><!-- End of widget --></div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Últimas publicaciones</h3> <div class="bubble-line"><div class="left-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0,29.4c0,0,7.5,0,7.5-7c0,0,7,0,7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7-7-7-7-7c0-7-7.5-7-7.5-7"></path>
+                        </svg>
+                </div><div class="right-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M15,29.4c0,0-7.5,0-7.5-7c0,0-7,0-7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7,7-7,7-7c0-7,7.5-7,7.5-7"></path>
+                        </svg>
+                </div></div>		<ul>
+											<li>
+					<a href="https://www.elconspirador.com/2019/05/03/de-guatemala-lima-explorando-peru-parte-1/">De Guatemala a Lima – Explorando Perú – Parte 1</a>
+									</li>
+											<li>
+					<a href="https://www.elconspirador.com/2019/03/26/optimizando-una-consulta-sql-que-utiliza-right-join-ejemplo-practico/">Optimizando una consulta SQL que utiliza RIGHT JOIN: ejemplo práctico</a>
+									</li>
+											<li>
+					<a href="https://www.elconspirador.com/2019/03/20/volcan-de-acatenango-fotografia-nocturna-y-tour-por-el-crater-mayor-segundo-video-como-youtuber/">Volcán de Acatenango – Fotografía nocturna y tour por el cráter mayor | Segundo video como Youtuber</a>
+									</li>
+											<li>
+					<a href="https://www.elconspirador.com/2019/03/01/como-obtener-un-access-token-de-instagram-sin-compartir-tu-id-de-cliente-y-clave-secreta-otros-sitios-web/">Como obtener un Access Token de Instagram sin compartir tu ID de cliente y clave secreta a otros sitios web</a>
+									</li>
+											<li>
+					<a href="https://www.elconspirador.com/2019/01/24/cronjob-para-bloquear-una-ip-de-dia-y-desbloquearla-de-noche/">Cronjob para bloquear una IP de día y desbloquearla de noche</a>
+									</li>
+											<li>
+					<a href="https://www.elconspirador.com/2019/01/13/concurrencia-maxima-de-un-servidor-apache2-gnu-linux/">Concurrencia máxima de un servidor Apache2 GNU/Linux</a>
+									</li>
+											<li>
+					<a href="https://www.elconspirador.com/2018/12/29/volcan-de-acatenango-y-mi-primer-video-como-youtuber/">Volcán de Acatenango y mi primer video como Youtuber</a>
+									</li>
+											<li>
+					<a href="https://www.elconspirador.com/2018/12/28/volcan-santo-tomas/">Volcán Santo Tomás</a>
+									</li>
+											<li>
+					<a href="https://www.elconspirador.com/2018/12/27/biotopo-del-quetzal/">Biotopo del Quetzal</a>
+									</li>
+											<li>
+					<a href="https://www.elconspirador.com/2018/12/22/semuc-champey/">Semuc Champey</a>
+									</li>
+					</ul>
+		</div><div id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categorías</h3> <div class="bubble-line"><div class="left-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0,29.4c0,0,7.5,0,7.5-7c0,0,7,0,7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7-7-7-7-7c0-7-7.5-7-7.5-7"></path>
+                        </svg>
+                </div><div class="right-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M15,29.4c0,0-7.5,0-7.5-7c0,0-7,0-7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7,7-7,7-7c0-7,7.5-7,7.5-7"></path>
+                        </svg>
+                </div></div>		<ul>
+	<li class="cat-item cat-item-191"><a href="https://www.elconspirador.com/arte/">Arte <span>12</span></a>
+</li>
+	<li class="cat-item cat-item-1118"><a href="https://www.elconspirador.com/base-de-datos/">Base de datos <span>16</span></a>
+</li>
+	<li class="cat-item cat-item-331"><a href="https://www.elconspirador.com/exploracion/">Exploración <span>91</span></a>
+<ul class="children">
+	<li class="cat-item cat-item-356"><a href="https://www.elconspirador.com/exploracion/artefacto/">Artefacto <span>11</span></a>
+</li>
+	<li class="cat-item cat-item-371"><a href="https://www.elconspirador.com/exploracion/costa-rica/">Costa Rica <span>4</span></a>
+</li>
+	<li class="cat-item cat-item-399"><a href="https://www.elconspirador.com/exploracion/mexico/">México <span>6</span></a>
+</li>
+	<li class="cat-item cat-item-14"><a href="https://www.elconspirador.com/exploracion/volcan/">Volcán <span>47</span></a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://www.elconspirador.com/frases-celebres/">Frases celebres <span>8</span></a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://www.elconspirador.com/musica/" title="
+">Música <span>30</span></a>
+<ul class="children">
+	<li class="cat-item cat-item-218"><a href="https://www.elconspirador.com/musica/lyrics/">Lyrics <span>4</span></a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://www.elconspirador.com/noticias/">Noticias <span>34</span></a>
+</li>
+	<li class="cat-item cat-item-26"><a href="https://www.elconspirador.com/redes/">Redes <span>18</span></a>
+</li>
+	<li class="cat-item cat-item-27"><a href="https://www.elconspirador.com/sistema-operativo/">Sistema operativo <span>21</span></a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://www.elconspirador.com/software/">Software <span>95</span></a>
+</li>
+	<li class="cat-item cat-item-13"><a href="https://www.elconspirador.com/tecnologia/" title="
+">Tecnología <span>34</span></a>
+</li>
+		</ul>
+</div><div id="popularidad_widget-2" class="widget widget_popularidad_widget"><div class="widget-text wp_widget_plugin_box"><h3 class="widget-title">Top 10</h3> <div class="bubble-line"><div class="left-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M0,29.4c0,0,7.5,0,7.5-7c0,0,7,0,7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7-7-7-7-7c0-7-7.5-7-7.5-7"></path>
+                        </svg>
+                </div><div class="right-shape">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10" d="M15,29.4c0,0-7.5,0-7.5-7c0,0-7,0-7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7,7-7,7-7c0-7,7.5-7,7.5-7"></path>
+                        </svg>
+                </div></div><ul class="most_liked_post wp_ulike_style_love"><li><a href="https://www.elconspirador.com/2013/12/21/que-es-y-para-que-sirve-un-modelo-conceptual/" title="Qué es y para qué sirve un modelo conceptual" rel="nofollow"><b>1</b>. Qué es y para qué sirve un modelo conceptual</a><br><div style="font-size: 10px !important; line-height: 16px !important; margin-bottom: 5px; margin-top: 5px;">Visitas: 94120<br>Tiempo total: 1210 días con 19:29:49 hrs</div></li><li><a href="https://www.elconspirador.com/2013/08/19/modelos-de-desarrollo-de-software/" title="Modelos de desarrollo de software" rel="nofollow"><b>2</b>. Modelos de desarrollo de software</a><br><div style="font-size: 10px !important; line-height: 16px !important; margin-bottom: 5px; margin-top: 5px;">Visitas: 52516<br>Tiempo total: 1165 días con 1:56:30 hrs</div></li><li><a href="https://www.elconspirador.com/2018/04/03/eclipse-spring-mvc-maven-tiles-external-mysql-server-jsp/" title="Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP" rel="nofollow"><b>3</b>. Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP</a><br><div style="font-size: 10px !important; line-height: 16px !important; margin-bottom: 5px; margin-top: 5px;">Visitas: 32656<br>Tiempo total: 1047 días con 11:22:30 hrs</div></li><li><a href="https://www.elconspirador.com/2013/10/16/concepto-de-tipos-de-reglas-del-negocio/" title="Concepto de tipos de reglas del negocio" rel="nofollow"><b>4</b>. Concepto de tipos de reglas del negocio</a><br><div style="font-size: 10px !important; line-height: 16px !important; margin-bottom: 5px; margin-top: 5px;">Visitas: 12768<br>Tiempo total: 870 días con 12:9:38 hrs</div></li><li><a href="https://www.elconspirador.com/2013/09/06/glassfish-server-netbeans-installation/" title="GlassFish server and Netbeans installation" rel="nofollow"><b>5</b>. GlassFish server and Netbeans installation</a><br><div style="font-size: 10px !important; line-height: 16px !important; margin-bottom: 5px; margin-top: 5px;">Visitas: 36850<br>Tiempo total: 721 días con 3:24:19 hrs</div></li><li><a href="https://www.elconspirador.com/2013/10/23/access-list-extendidas-para-denegar-servicios-en-una-red/" title="Access List extendidas para denegar servicios en una red" rel="nofollow"><b>6</b>. Access List extendidas para denegar servicios en una red</a><br><div style="font-size: 10px !important; line-height: 16px !important; margin-bottom: 5px; margin-top: 5px;">Visitas: 29535<br>Tiempo total: 559 días con 14:51:18 hrs</div></li><li><a href="https://www.elconspirador.com/2013/08/02/las-partes-basicas-del-sistema-operativo/" title="Las partes básicas del sistema operativo" rel="nofollow"><b>7</b>. Las partes básicas del sistema operativo</a><br><div style="font-size: 10px !important; line-height: 16px !important; margin-bottom: 5px; margin-top: 5px;">Visitas: 41631<br>Tiempo total: 538 días con 9:59:49 hrs</div></li><li><a href="https://www.elconspirador.com/2013/12/09/clasificacion-y-tipos-de-modelos/" title="Clasificación y tipos de modelos" rel="nofollow"><b>8</b>. Clasificación y tipos de modelos</a><br><div style="font-size: 10px !important; line-height: 16px !important; margin-bottom: 5px; margin-top: 5px;">Visitas: 32844<br>Tiempo total: 494 días con 19:26:8 hrs</div></li><li><a href="https://www.elconspirador.com/2014/04/08/agregar-nueva-dependencia-en-eclipse-maven/" title="Agregar nueva dependencia en Eclipse – Maven" rel="nofollow"><b>9</b>. Agregar nueva dependencia en Eclipse – Maven</a><br><div style="font-size: 10px !important; line-height: 16px !important; margin-bottom: 5px; margin-top: 5px;">Visitas: 11163<br>Tiempo total: 484 días con 3:34:27 hrs</div></li><li><a href="https://www.elconspirador.com/2015/04/17/como-funciona-una-pagina-web/" title="Como funciona una página web" rel="nofollow"><b>10</b>. Como funciona una página web</a><br><div style="font-size: 10px !important; line-height: 16px !important; margin-bottom: 5px; margin-top: 5px;">Visitas: 26756<br>Tiempo total: 317 días con 20:39:40 hrs</div></li><li><div style="font-size: 10px !important; line-height: 16px !important; margin-bottom: 5px; margin-top: 5px;"><br>Top: más tiempo visitado.<br>Desde el 4 de marzo de 2019, 21:58:06 hrs.<br><br>Datos actualizados una vez al día.<br></div></li></ul></div></div>
+</div>
+        </div>
+    </div>
+</section>
+        <script type="text/template" id="tpl-bubble-left">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10"
+                                  d="M0,29.4c0,0,7.5,0,7.5-7c0,0,7,0,7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7-7-7-7-7c0-7-7.5-7-7.5-7"/>
+                        </svg>
+                </script>
+                <script type="text/template" id="tpl-bubble-right">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 15 30" enable-background="new 0 0 15 30" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-miterlimit="10"
+                                  d="M15,29.4c0,0-7.5,0-7.5-7c0,0-7,0-7-7c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-7,7-7,7-7c0-7,7.5-7,7.5-7"/>
+                        </svg>
+                </script>
+		<div class="suscripcion_back">
+			<div class="form_back">
+				<div class="form_content">
+					<img src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/elConspirador.com.png" alt="">
+					<div class="file">
+						<br>
+						<div class="file desc">Para recibir boletines de información, por favor escribe tu correo electrónico:</div>
+						<br>
+						<input type="text" name="sus_email" id="sus_email" placeholder="Correo electronico *">
+						<input type="text" name="sus_nombre" id="sus_nombre" placeholder="Nombre">
+						<div class="file warning">
+							Por favor ingrese un correo electrónico valido.
+						</div>
+						<div class="file successful">
+							Registrado correctamente!
+						</div>
+						<input type="button" name="sus_ok" id="sus_ok" value="Aceptar">
+						<input type="button" name="sus_notok" id="sus_notok" value="Cancelar">
+					</div>
+				</div>
+				<div class="close">&nbsp;</div>
+			</div>
+		</div>
+        <footer id="footer">
+            
+            <section class="instagram-follow">
+               <h2>  </h2>
+            </section>
+
+            <div class="footer-slide">
+					<div class="swiper-center"> <a href="javascript:;"> </a><a href="https://instagram.com/josepablo_gl" target="_new" alt="Sigueme en Instagram"><i class="fa fa-instagram"></i>&nbsp;&nbsp;Instagram</a> </div>
+                    <div id="instagram-username">self</div>
+                    <div id="instagram-id">757797958.628d081.cb08104f4ca34c6da1ef62a680154ac0</div>
+                    <div class="lSSlideOuter "><div class="lSSlideWrapper usingCss"><ul class="social-instafeeds lightSlider lsGrab" data-username="self" data-key="757797958.628d081.cb08104f4ca34c6da1ef62a680154ac0" style="width: 2869.5px; height: 468px; padding-bottom: 0%; transform: translate3d(0px, 0px, 0px);">
+                    <li class="il-item lslide active" data-instagram-id="2050221968724535364_757797958" style="width: 468.25px; margin-right: 10px;"><a href="https://www.instagram.com/p/Bxz2gSchyhE/" target="_blank"><img class="img il-photo__img" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/60256939_339214310118628_6904059779391866173_n.jpg" alt="Instagram Image" data-filter="Lo-fi"></a></li><li class="il-item lslide" data-instagram-id="2049860093101994317_757797958" style="width: 468.25px; margin-right: 10px;"><a href="https://www.instagram.com/p/BxykOTgl_FN/" target="_blank"><img class="img il-photo__img" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/59664582_289800745069892_1510489629033700919_n.jpg" alt="Instagram Image" data-filter="Normal"></a></li><li class="il-item lslide" data-instagram-id="2049435843151951798_757797958" style="width: 468.25px; margin-right: 10px;"><a href="https://www.instagram.com/p/BxxDwp9Bne2/" target="_blank"><img class="img il-photo__img" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/60793333_656987464762405_5832576538112953088_n.jpg" alt="Instagram Image" data-filter="Normal"></a></li><li class="il-item lslide" data-instagram-id="2049118841565634765_757797958" style="width: 468.25px; margin-right: 10px;"><a href="https://www.instagram.com/p/Bxv7rrOFGDN/" target="_blank"><img width="586" height="330" style="width: 586px !important; height: 330px !important;" class="img2 il-photo__img" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/60240539_2135560663237918_12750272750436326_n.jpg" alt="Instagram Image" data-filter="Normal"></a></li><li class="il-item lslide" data-instagram-id="2048367599474353285_757797958" style="width: 468.25px; margin-right: 10px;"><a href="https://www.instagram.com/p/BxtQ3qgFqSF/" target="_blank"><img class="img il-photo__img" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/59893984_144147646711935_7812142358618603403_n.jpg" alt="Instagram Image" data-filter="Normal"></a></li><li class="il-item lslide" data-instagram-id="2046999549269353305_757797958" style="width: 468.25px; margin-right: 10px;"><a href="https://www.instagram.com/p/BxoZz6dlaNZ/" target="_blank"><img width="534" height="330" style="width: 534px !important; height: 330px !important;" class="img2 il-photo__img" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/60385025_458817658201930_85813965425153007_n.jpg" alt="Instagram Image" data-filter="Lo-fi"></a></li></ul><div class="lSAction"><a class="lSPrev"></a><a class="lSNext"></a></div></div></div>
+               
+              <!-- <div class="slide-button control-prev"><i class="fa fa-chevron-left"></i></div>
+              <div class="slide-button control-next"><i class="fa fa-chevron-right"></i></div> -->
+                
+
+            </div>
+                        <div class="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="widget">
+                            </div>
+                            <div class="widget footer-cp-text">
+                                <p>"Porque el brillo del sol me enseñó que la inmensidad es obra de Dios"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript">
+/* <![CDATA[ */
+var lightbox_type = [""];
+var ajaxUrl = "https:\/\/www.elconspirador.com\/wp-admin\/admin-ajax.php";
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/custom.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/jquery.rating.pack.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/frontend.js.descarga"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.elconspirador.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/scripts.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/widget.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/core.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/mouse.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/slider.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/button.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/spinner.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/effect.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/effect-shake.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/datepicker.min.js.descarga"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wp_ulike_params = {"ajax_url":"https:\/\/www.elconspirador.com\/wp-admin\/admin-ajax.php","counter_selector":".count-box","button_selector":".wp_ulike_btn","general_selector":".wp_ulike_general_class","button_type":"image","notifications":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/wp-ulike.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/wp-mediaelement.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/comment-reply.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/bootstrap.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/instagramLite.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/swiper.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/isotope.pkgd.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/lightslider.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/scripts.js(1).descarga"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var a3_lazyload_params = {"apply_images":"1","apply_videos":"1"};
+var a3_lazyload_params = {"apply_images":"1","apply_videos":"1"};
+var a3_lazyload_params = {"apply_images":"1","apply_videos":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/jquery.lazyloadxt.min.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/jquery.lazyloadxt.srcset.min.js.descarga"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var a3_lazyload_extend_params = {"edgeY":"0"};
+var a3_lazyload_extend_params = {"edgeY":"0"};
+var a3_lazyload_extend_params = {"edgeY":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/jquery.lazyloadxt.extend.js.descarga"></script>
+<script type="text/javascript" src="./Eclipse + Spring MVC + Maven + Tiles + External MySQL server + JSP - elConspirador.com_files/wp-embed.min.js.descarga"></script>
+
+<img alt="preload image" style="display: none;"><img alt="preload image" style="display: none;"></body></html>
